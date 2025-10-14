@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 500" width="300" height="500">
+  <rect x="50" y="0" width="200" height="500" fill="#000" rx="20"/>
+  <rect x="60" y="10" width="180" height="480" fill="#fff" rx="15"/>
+  <rect x="60" y="10" width="180" height="40" fill="#0069ff" rx="15 15 0 0"/>
+  <text x="150" y="35" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold">RecruitAI</text>
+  <rect x="70" y="60" width="160" height="100" fill="#f8f9ff" rx="8"/>
+  <text x="150" y="85" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="12" font-weight="bold">AI Recommendations</text>
+  <rect x="80" y="100" width="140" height="40" fill="#fff" rx="4" stroke="#ddd"/>
+  <text x="90" y="125" fill="#333" font-family="Arial, sans-serif" font-size="10">Top candidate: John Doe</text>
+  <rect x="70" y="180" width="160" height="100" fill="#f8f9ff" rx="8"/>
+  <text x="150" y="205" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Job Postings</text>
+  <rect x="80" y="220" width="140" height="40" fill="#fff" rx="4" stroke="#ddd"/>
+  <text x="90" y="245" fill="#333" font-family="Arial, sans-serif" font-size="10">Posted to 5 boards</text>
+  <rect x="70" y="300" width="160" height="100" fill="#f8f9ff" rx="8"/>
+  <text x="150" y="325" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Analytics</text>
+  <text x="150" y="350" text-anchor="middle" fill="#0069ff" font-family="Arial, sans-serif" font-size="16" font-weight="bold">12 days</text>
+  <text x="150" y="370" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="10">Time to Hire</text>
+</svg>

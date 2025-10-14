@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <rect width="600" height="400" fill="#f8f9ff" rx="12"/>
+  <rect x="20" y="20" width="560" height="40" fill="#0069ff" rx="6"/>
+  <text x="300" y="45" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">RecruitAI Dashboard</text>
+  <rect x="20" y="80" width="180" height="120" fill="#fff" rx="8" stroke="#ddd"/>
+  <text x="110" y="110" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="14" font-weight="bold">AI Recommendations</text>
+  <rect x="220" y="80" width="180" height="120" fill="#fff" rx="8" stroke="#ddd"/>
+  <text x="310" y="110" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Job Postings</text>
+  <rect x="420" y="80" width="160" height="120" fill="#fff" rx="8" stroke="#ddd"/>
+  <text x="500" y="110" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Analytics</text>
+  <rect x="20" y="220" width="560" height="160" fill="#fff" rx="8" stroke="#ddd"/>
+  <text x="300" y="250" text-anchor="middle" fill="#333" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Candidate Pipeline</text>
+  <circle cx="100" cy="300" r="20" fill="#7f05ff"/>
+  <circle cx="200" cy="300" r="20" fill="#0069ff"/>
+  <circle cx="300" cy="300" r="20" fill="#7f05ff"/>
+  <circle cx="400" cy="300" r="20" fill="#0069ff"/>
+  <circle cx="500" cy="300" r="20" fill="#7f05ff"/>
+</svg>
