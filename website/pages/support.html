@@ -8,24 +8,170 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Mona+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="logo">
-                <a href="../index.html"><img src="../img/l.png" alt="TalentPrism Logo" style="width: auto; height:70px;"></a>
+                <a href="../index.html"><img src="../img/l.png" alt="TalentPrism Logo" style="height:50px;width:auto"></a>
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="../index.html#features">Features</a></li>
-                    <li><a href="../pages/pricing.html">Pricing</a></li>
-                    <li><a href="customers.html">Customers</a></li>
-                    <li><a href="blog.html">Resources</a></li>
-                    <li><a href="#contact">Support</a></li>
+                    <li class="dropdown">
+                        <a href="#features">Features <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="candidate-sourcing.html">
+                                    <i class="fas fa-user-plus"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Candidate Sourcing</strong>
+                                        <span>Find top talent from multiple sources</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ai-candidate-enrichment.html">
+                                    <i class="fas fa-user"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>AI Candidate Enrichment</strong>
+                                        <span>Enhance profiles with AI insights</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="analytics.html">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Analytics & Reports</strong>
+                                        <span>Data-driven recruitment insights</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="support.html">
+                                    <i class="fas fa-headset"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Support & Assistance</strong>
+                                        <span>24/7 expert help and guidance</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="applicant-tracking.html">
+                                    <i class="fas fa-users"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Applicant Tracking System</strong>
+                                        <span>Streamline your hiring pipeline</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ai-recommendations.html">
+                                    <i class="fas fa-wand-magic-sparkles"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>AI Recommendations</strong>
+                                        <span>Smart candidate matching</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="branded-career.html">
+                                    <i class="fas fa-award"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Branded Career Page</strong>
+                                        <span>Showcase your employer brand</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="security.html">
+                                    <i class="fas fa-lock"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Security</strong>
+                                        <span>Enterprise-grade data protection</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="recruitment-crm.html">
+                                    <i class="fas fa-th-large"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Recruitment CRM</strong>
+                                        <span>Manage relationships effectively</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="collaboration.html">
+                                    <i class="fas fa-handshake"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Collaboration & Activities</strong>
+                                        <span>Team coordination tools</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="data-privacy.html">
+                                    <i class="fas fa-user-lock"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Data Privacy & Compliance</strong>
+                                        <span>GDPR and privacy compliant</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#solutions">Solutions <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu dropdown-menu-solutions">
+                            <li>
+                                <a href="freelance-recruiters.html">
+                                    <i class="fas fa-user-tie"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Freelance Recruiters</strong>
+                                        <span>Tools for independent recruitment professionals</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="staffing-agencies.html">
+                                    <i class="fas fa-building"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Staffing Agencies</strong>
+                                        <span>Complete staffing agency management platform</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="executive-search.html">
+                                    <i class="fas fa-crown"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Executive Search</strong>
+                                        <span>Elite talent acquisition for C-level positions</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="recruitment-agencies.html">
+                                    <i class="fas fa-users-cog"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Recruitment Agencies</strong>
+                                        <span>Scale your recruitment agency operations</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="/website/pages/integration.html">Integrations</a></li> -->
+                    <!-- <li><a href="pages/blog.html">Resources</a></li> -->
+                    <li><a href="pricing.html">Pricing</a></li>
+                    
+                    
                 </ul>
             </nav>
-            <div class="header-ctas">
+            <div class="headeink">
                 <a href="#" class="btn btn-outline">Book a demo</a>
                 <a href="#" class="btn btn-primary">Start free trial</a>
             </div>
@@ -38,123 +184,297 @@
     </header>
 
     <main>
-        <section class="hero" style="padding: 80px 0;">
+        <!-- Hero Section -->
+        <section class="hero-section" style="padding:120px 0 80px;background:linear-gradient(135deg,#f0fdf4 0%,#dcfce7 100%);">
             <div class="container">
-                <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
-                    <h1>Help & Support Center</h1>
-                    <p>Find answers, get help, and make the most of TalentPrism.</p>
+                <div class="hero-grid" style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:80px;align-items:center;">
+                    <div class="hero-content">
+                        <div style="display:inline-block;padding:8px 16px;background:rgba(34,197,94,0.15);border-radius:20px;margin-bottom:20px;">
+                            <span style="color:#16a34a;font-weight:600;font-size:0.9rem;">💬 SUPPORT & ASSISTANCE</span>
+                        </div>
+                        <h1 style="font-size:4rem;font-weight:700;line-height:1.1;margin-bottom:24px;color:#1a1a1a;">We're Here to Help You Succeed</h1>
+                        <p style="font-size:1.3rem;color:#5a6c7d;margin-bottom:36px;line-height:1.6;">Get expert support, comprehensive documentation, and dedicated assistance to maximize your recruitment success with TalentPrism.</p>
+                        <div class="hero-ctas" style="display:flex;gap:16px;margin-bottom:32px;">
+                            <a href="contact.html" class="btn btn-primary btn-large" style="padding:16px 32px;font-size:1.1rem;">Contact Support</a>
+                            <a href="#resources" class="btn btn-outline btn-large" style="padding:16px 32px;font-size:1.1rem;">Browse Resources</a>
+                        </div>
+                        <div style="display:flex;gap:32px;padding-top:24px;border-top:1px solid #d1fae5;">
+                            <div>
+                                <div style="font-size:2rem;font-weight:700;color:#16a34a;">< 2h</div>
+                                <div style="font-size:0.9rem;color:#6c757d;">Avg Response Time</div>
+                            </div>
+                            <div>
+                                <div style="font-size:2rem;font-weight:700;color:#16a34a;">24/7</div>
+                                <div style="font-size:0.9rem;color:#6c757d;">Enterprise Support</div>
+                            </div>
+                            <div>
+                                <div style="font-size:2rem;font-weight:700;color:#16a34a;">98%</div>
+                                <div style="font-size:0.9rem;color:#6c757d;">Satisfaction Rate</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <img src="../img/support-hero.png" alt="Support Team" style="width:100%;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,0.15);">
+                    </div>
+                </div>
+            </div>
+        </section>
+                        <img src="../img/support-hero.png" alt="Support Team" style="width:100%;max-width:500px;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.1);">
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="support-content">
+        <!-- Support Options -->
+        <section class="support-options" style="padding:100px 0;background:#fff;">
             <div class="container">
-                <div class="support-grid">
-                    <div class="support-section">
-                        <h3>Getting Started</h3>
-                        <ul>
-                            <li><a href="#">Quick start guide</a></li>
-                            <li><a href="#">Setting up your account</a></li>
-                            <li><a href="#">Importing candidates</a></li>
-                            <li><a href="#">Creating your first job posting</a></li>
-                        </ul>
+                <div class="section-header" style="text-align:center;margin-bottom:70px;">
+                    <div style="display:inline-block;padding:8px 16px;background:rgba(34,197,94,0.1);border-radius:20px;margin-bottom:16px;">
+                        <span style="color:#16a34a;font-weight:600;font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;">SUPPORT CHANNELS</span>
                     </div>
-                    <div class="support-section">
-                        <h3>Features & How-Tos</h3>
-                        <ul>
-                            <li><a href="#">Using AI recommendations</a></li>
-                            <li><a href="#">Managing your pipeline</a></li>
-                            <li><a href="#">Setting up integrations</a></li>
-                            <li><a href="#">Analytics and reporting</a></li>
-                        </ul>
+                    <h2 style="font-size:3rem;font-weight:700;margin-bottom:20px;color:#1a1a1a;">Get Help Your Way</h2>
+                    <p style="font-size:1.2rem;color:#6c757d;max-width:700px;margin:0 auto;">Choose from multiple support channels designed to help you succeed with TalentPrism.</p>
+                </div>
+                <div class="options-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;">
+                    <div class="option-card" style="padding:40px;border:2px solid #e9ecef;border-radius:16px;text-align:center;background:#fff;transition:all 0.3s ease;">
+                        <div style="width:80px;height:80px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
+                            <i class="fas fa-envelope" style="color:#fff;font-size:2rem;"></i>
+                        </div>
+                        <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:12px;color:#1a1a1a;">Email Support</h3>
+                        <p style="color:#6c757d;margin-bottom:24px;line-height:1.6;">Get detailed help from our technical experts. Response within 2 hours.</p>
+                        <a href="mailto:support@talentprism.com" class="btn btn-outline" style="width:100%;">Email Us</a>
                     </div>
-                    <div class="support-section">
-                        <h3>Troubleshooting</h3>
-                        <ul>
-                            <li><a href="#">Common issues</a></li>
-                            <li><a href="#">Account and billing</a></li>
-                            <li><a href="#">Technical support</a></li>
-                            <li><a href="#">Contact support</a></li>
-                        </ul>
+                    <div class="option-card" style="padding:40px;border:2px solid #e9ecef;border-radius:16px;text-align:center;background:#fff;transition:all 0.3s ease;">
+                        <div style="width:80px;height:80px;background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
+                            <i class="fas fa-comments" style="color:#fff;font-size:2rem;"></i>
+                        </div>
+                        <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:12px;color:#1a1a1a;">Live Chat</h3>
+                        <p style="color:#6c757d;margin-bottom:24px;line-height:1.6;">Instant help from support agents during business hours.</p>
+                        <a href="#" class="btn btn-outline" style="width:100%;">Start Chat</a>
                     </div>
-                    <div class="support-section">
-                        <h3>API & Developers</h3>
-                        <ul>
-                            <li><a href="#">API documentation</a></li>
-                            <li><a href="#">Webhooks</a></li>
-                            <li><a href="#">Integrations</a></li>
-                            <li><a href="#">Developer resources</a></li>
-                        </ul>
+                    <div class="option-card" style="padding:40px;border:2px solid #e9ecef;border-radius:16px;text-align:center;background:#fff;transition:all 0.3s ease;">
+                        <div style="width:80px;height:80px;background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
+                            <i class="fas fa-phone" style="color:#fff;font-size:2rem;"></i>
+                        </div>
+                        <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:12px;color:#1a1a1a;">Phone Support</h3>
+                        <p style="color:#6c757d;margin-bottom:24px;line-height:1.6;">Direct line to specialists. Enterprise customers only.</p>
+                        <a href="#" class="btn btn-outline" style="width:100%;">Call Us</a>
+                    </div>
+                    <div class="option-card" style="padding:40px;border:2px solid #e9ecef;border-radius:16px;text-align:center;background:#fff;transition:all 0.3s ease;">
+                        <div style="width:80px;height:80px;background:linear-gradient(135deg,#fa709a 0%,#fee140 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
+                            <i class="fas fa-users" style="color:#fff;font-size:2rem;"></i>
+                        </div>
+                        <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:12px;color:#1a1a1a;">Community Forum</h3>
+                        <p style="color:#6c757d;margin-bottom:24px;line-height:1.6;">Connect with users and share best practices.</p>
+                        <a href="#" class="btn btn-outline" style="width:100%;">Join Community</a>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="contact-support">
-                    <h3>Need more help?</h3>
-                    <p>Our support team is here to assist you.</p>
-                    <div class="contact-options">
-                        <div class="contact-option">
-                            <h4>Email Support</h4>
-                            <p>Get help from our experts</p>
-                            <a href="mailto:support@recuritai.com" class="btn btn-secondary">Email us</a>
+        <!-- Resources Section -->
+        <section class="resources-section" style="padding:100px 0;background:linear-gradient(135deg,#f0f9ff 0%,#e0f2fe 100%);">
+            <div class="container">
+                <div class="section-header" style="text-align:center;margin-bottom:70px;">
+                    <div style="display:inline-block;padding:8px 16px;background:rgba(59,130,246,0.1);border-radius:20px;margin-bottom:16px;">
+                        <span style="color:#3b82f6;font-weight:600;font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;">SELF-SERVICE RESOURCES</span>
+                    </div>
+                    <h2 style="font-size:3rem;font-weight:700;margin-bottom:20px;color:#1a1a1a;">Everything You Need to Succeed</h2>
+                    <p style="font-size:1.2rem;color:#6c757d;max-width:700px;margin:0 auto;">Access comprehensive resources designed to help you get the most out of TalentPrism.</p>
+                </div>
+                <div class="resources-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;">
+                    <div class="resource-card" style="padding:40px;border:2px solid #fff;border-radius:16px;background:#fff;box-shadow:0 4px 6px rgba(0,0,0,0.05);transition:all 0.3s ease;">
+                        <div style="width:80px;height:80px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;">
+                            <i class="fas fa-book" style="color:#fff;font-size:2rem;"></i>
                         </div>
-                        <div class="contact-option">
-                            <h4>Live Chat</h4>
-                            <p>Chat with a support agent</p>
-                            <a href="#" class="btn btn-secondary">Start chat</a>
+                        <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:12px;color:#1a1a1a;">Documentation</h3>
+                        <p style="color:#6c757d;margin-bottom:24px;line-height:1.6;">Complete guides for setup, features, and best practices.</p>
+                        <a href="#" class="btn btn-outline" style="width:100%;">View Docs</a>
+                    </div>
+                    <div class="resource-card" style="padding:40px;border:2px solid #fff;border-radius:16px;background:#fff;box-shadow:0 4px 6px rgba(0,0,0,0.05);transition:all 0.3s ease;">
+                        <div style="width:80px;height:80px;background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;">
+                            <i class="fas fa-video" style="color:#fff;font-size:2rem;"></i>
                         </div>
-                        <div class="contact-option">
-                            <h4>Community Forum</h4>
-                            <p>Ask questions and share knowledge</p>
-                            <a href="#" class="btn btn-secondary">Join forum</a>
+                        <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:12px;color:#1a1a1a;">Video Tutorials</h3>
+                        <p style="color:#6c757d;margin-bottom:24px;line-height:1.6;">Step-by-step video guides for all major features.</p>
+                        <a href="#" class="btn btn-outline" style="width:100%;">Watch Videos</a>
+                    </div>
+                    <div class="resource-card" style="padding:40px;border:2px solid #fff;border-radius:16px;background:#fff;box-shadow:0 4px 6px rgba(0,0,0,0.05);transition:all 0.3s ease;">
+                        <div style="width:80px;height:80px;background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;">
+                            <i class="fas fa-code" style="color:#fff;font-size:2rem;"></i>
                         </div>
+                        <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:12px;color:#1a1a1a;">API & Integrations</h3>
+                        <p style="color:#6c757d;margin-bottom:24px;line-height:1.6;">Developer resources for custom integrations and automation.</p>
+                        <a href="#" class="btn btn-outline" style="width:100%;">API Docs</a>
+                    </div>
+                    <div class="resource-card" style="padding:40px;border:2px solid #fff;border-radius:16px;background:#fff;box-shadow:0 4px 6px rgba(0,0,0,0.05);transition:all 0.3s ease;">
+                        <div style="width:80px;height:80px;background:linear-gradient(135deg,#fa709a 0%,#fee140 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;">
+                            <i class="fas fa-graduation-cap" style="color:#fff;font-size:2rem;"></i>
+                        </div>
+                        <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:12px;color:#1a1a1a;">Training & Webinars</h3>
+                        <p style="color:#6c757d;margin-bottom:24px;line-height:1.6;">Live sessions and on-demand training for your team.</p>
+                        <a href="#" class="btn btn-outline" style="width:100%;">View Training</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" style="padding:100px 0;background:linear-gradient(135deg,#16a34a 0%,#15803d 100%);color:#fff;text-align:center;">
+            <div class="container">
+                <div style="display:inline-block;padding:8px 16px;background:rgba(255,255,255,0.15);border-radius:20px;margin-bottom:24px;">
+                    <span style="color:#fff;font-weight:600;font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;">READY TO GET STARTED?</span>
+                </div>
+                <h2 style="font-size:3.5rem;font-weight:700;margin-bottom:24px;line-height:1.2;">We're Here to Help You Succeed</h2>
+                <p style="font-size:1.3rem;margin-bottom:40px;max-width:700px;margin-left:auto;margin-right:auto;opacity:0.95;">Our dedicated support team is available 24/7 to answer your questions and ensure you get the most from TalentPrism.</p>
+                <div style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:50px;">
+                    <a href="contact.html" class="btn btn-light btn-large" style="background:#fff;color:#16a34a;padding:16px 40px;font-size:1.1rem;border-radius:8px;font-weight:600;box-shadow:0 4px 6px rgba(0,0,0,0.1);">Contact Support</a>
+                    <a href="bookdemo.html" class="btn btn-outline-light btn-large" style="border:2px solid #fff;color:#fff;padding:16px 40px;font-size:1.1rem;border-radius:8px;font-weight:600;">Schedule a Call</a>
+                </div>
+                <div style="display:flex;gap:50px;justify-content:center;flex-wrap:wrap;">
+                    <div style="text-align:center;">
+                        <div style="font-size:2.5rem;font-weight:700;margin-bottom:8px;">&lt;2 Hours</div>
+                        <div style="opacity:0.9;font-size:1rem;">Average Response Time</div>
+                    </div>
+                    <div style="text-align:center;">
+                        <div style="font-size:2.5rem;font-weight:700;margin-bottom:8px;">24/7</div>
+                        <div style="opacity:0.9;font-size:1rem;">Support Available</div>
+                    </div>
+                    <div style="text-align:center;">
+                        <div style="font-size:2.5rem;font-weight:700;margin-bottom:8px;">98%</div>
+                        <div style="opacity:0.9;font-size:1rem;">Customer Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unified FAQ -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-item">
+                        <div class="faq-question">What support channels are available?<span class="faq-toggle">+</span></div>
+                        <div class="faq-answer">We offer email, live chat, phone support, and a community forum. Enterprise plans receive 24/7 priority assistance.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">How fast is your response time?<span class="faq-toggle">+</span></div>
+                        <div class="faq-answer">Our target initial response is within 2 business hours. Critical issues are handled immediately.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Do you provide onboarding and training?<span class="faq-toggle">+</span></div>
+                        <div class="faq-answer">Yes. We provide guided setup, documentation, and live sessions to help your team adopt best practices.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Is developer support available?<span class="faq-toggle">+</span></div>
+                        <div class="faq-answer">Developers can access our API docs, webhooks, sample apps, and direct support for integration questions.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pre-footer-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Try TalentPrism for free during 14-day with no commitment.</h2>
+                    <p>No credit card required • 2 minutes to get started</p>
+                    <div class="cta-buttons">
+                        <a href="signin.html" class="btn btn-primary btn-large">Start Free Trial</a>
+                        <a href="bookdemo.html" class="btn btn-outline btn-large">Book a Demo</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
+   <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Product</h4>
-                    <ul>
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="features.html">Integrations</a></li>
-                    </ul>
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="../img/l.png" alt="TalentPrism">
+                    </div>
+                    <p class="footer-tagline">
+                        Revolutionizing recruitment with AI-powered talent matching and intelligent automation solutions.
+                    </p>
+                    <div class="footer-newsletter">
+                        <h5>Stay Updated</h5>
+                        <p>Get the latest insights on recruitment trends and product updates.</p>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                            <button type="submit" class="newsletter-btn">Subscribe</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="#docs">Docs</a></li>
-                        <li><a href="#support">Support</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="index.html#contact">Contact</a></li>
-                        <li><a href="customers.html">Customers</a></li>
-                        <li><a href="blog.html">Careers</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="privacy.html">Privacy</a></li>
-                        <li><a href="terms.html">Terms</a></li>
-                        <li><a href="privacy.html">Security</a></li>
-                    </ul>
+
+                <!-- Navigation Columns -->
+                <div class="footer-nav">
+                    <div class="footer-column">
+                        <h4> Features</h4>
+                        <ul>
+                            <li><a href="candidate-sourcing.html"> Candidate Sourcing</a></li>
+                            <li><a href="ai-candidate-enrichment.html"> AI Enrichment</a></li>
+                            <li><a href="analytics.html"> Analytics & Reports</a></li>
+                            <li><a href="applicant-tracking.html"> Applicant Tracking</a></li>
+                            <li><a href="ai-recommendations.html"> AI Recommendations</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4> Platform</h4>
+                        <ul>
+                            <li><a href="branded-career.html"> Branded Career Page</a></li>
+                            <li><a href="recruitment-crm.html"> Recruitment CRM</a></li>
+                            <li><a href="collaboration.html"> Collaboration</a></li>
+                            <li><a href="data-privacy.html"> Data Privacy</a></li>
+                            <li><a href="support.html"> Support</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4> Solutions</h4>
+                        <ul>
+                            <li><a href="executive-search.html"> Executive Search</a></li>
+                            <li><a href="staffing-agencies.html"> Staffing Agencies</a></li>
+                            <li><a href="recruitment-agencies.html"> Recruitment Agencies</a></li>
+                            <li><a href="freelance-recruiters.html"> Freelance Recruiters</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4> Company</h4>
+                        <ul>
+                            <li><a href="#about"> About Us</a></li>
+                            <li><a href="#careers"> Careers</a></li>
+                            <li><a href="#contact"> Contact</a></li>
+                            <li><a href="#blog"> Blog</a></li>
+                            <li><a href="#press"> Press Kit</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
+            <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <p>&copy; 2025 RecruitAI. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="LinkedIn"><img src="../images/linkedin-icon.svg" alt="LinkedIn"></a>
-                    <a href="#" aria-label="Twitter"><img src="../images/twitter-icon.svg" alt="Twitter"></a>
-                    <a href="#" aria-label="Facebook"><img src="../images/facebook-icon.svg" alt="Facebook"></a>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 TalentPrism. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#security">Security</a>
+                    <a href="#cookies">Cookie Policy</a>
+                </div>
+                <div class="footer-social">
+                    <h5>Follow Us</h5>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
             </div>
         </div>

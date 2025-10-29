@@ -8,24 +8,170 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Mona+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="logo">
-                <a href="../index.html"><img src="../img/l.png" alt="TalentPrism Logo" style="width: auto; height:70px;"></a>
+                <a href="/website/index.html"><img src="../img/l.png" alt="TalentPrism Logo" style="width: auto; height:70px;"></a>
             </div>
             <nav class="nav">
                 <ul>
-                    <li><a href="../index.html#features">Features</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="customers.html">Customers</a></li>
-                    <li><a href="blog.html">Resources</a></li>
-                    <li><a href="support.html">Support</a></li>
+                    <li class="dropdown">
+                        <a href="#features">Features <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="candidate-sourcing.html">
+                                    <i class="fas fa-user-plus"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Candidate Sourcing</strong>
+                                        <span>Find top talent from multiple sources</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ai-candidate-enrichment.html">
+                                    <i class="fas fa-user"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>AI Candidate Enrichment</strong>
+                                        <span>Enhance profiles with AI insights</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="analytics.html">
+                                    <i class="fas fa-chart-bar"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Analytics & Reports</strong>
+                                        <span>Data-driven recruitment insights</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="support.html">
+                                    <i class="fas fa-headset"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Support & Assistance</strong>
+                                        <span>24/7 expert help and guidance</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="applicant-tracking.html">
+                                    <i class="fas fa-users"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Applicant Tracking System</strong>
+                                        <span>Streamline your hiring pipeline</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ai-recommendations.html">
+                                    <i class="fas fa-wand-magic-sparkles"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>AI Recommendations</strong>
+                                        <span>Smart candidate matching</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="branded-career.html">
+                                    <i class="fas fa-award"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Branded Career Page</strong>
+                                        <span>Showcase your employer brand</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="security.html">
+                                    <i class="fas fa-lock"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Security</strong>
+                                        <span>Enterprise-grade data protection</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="recruitment-crm.html">
+                                    <i class="fas fa-th-large"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Recruitment CRM</strong>
+                                        <span>Manage relationships effectively</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="collaboration.html">
+                                    <i class="fas fa-handshake"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Collaboration & Activities</strong>
+                                        <span>Team coordination tools</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="data-privacy.html">
+                                    <i class="fas fa-user-lock"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Data Privacy & Compliance</strong>
+                                        <span>GDPR and privacy compliant</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#solutions">Solutions <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu dropdown-menu-solutions">
+                            <li>
+                                <a href="freelance-recruiters.html">
+                                    <i class="fas fa-user-tie"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Freelance Recruiters</strong>
+                                        <span>Tools for independent recruitment professionals</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="staffing-agencies.html">
+                                    <i class="fas fa-building"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Staffing Agencies</strong>
+                                        <span>Complete staffing agency management platform</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="executive-search.html">
+                                    <i class="fas fa-crown"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Executive Search</strong>
+                                        <span>Elite talent acquisition for C-level positions</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="recruitment-agencies.html">
+                                    <i class="fas fa-users-cog"></i>
+                                    <div class="dropdown-item-content">
+                                        <strong>Recruitment Agencies</strong>
+                                        <span>Scale your recruitment agency operations</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- <li><a href="/website/pages/integration.html">Integrations</a></li> -->
+                    <!-- <li><a href="pages/blog.html">Resources</a></li> -->
+                    <li><a href="/website/pages/pricing.html">Pricing</a></li>
+                    
+                    
                 </ul>
             </nav>
-            <div class="header-ctas">
+            <div class="headeink">
                 <a href="#" class="btn btn-outline">Book a demo</a>
                 <a href="#" class="btn btn-primary">Start free trial</a>
             </div>
@@ -38,10 +184,15 @@
     </header>
 
     <main>
-        <section class="pricing" id="pricing">
+        <section class="pricing-hero">
             <div class="container">
                 <h1>Simple, transparent pricing</h1>
                 <p>Choose the plan that fits your hiring needs. All plans include a 14-day free trial.</p>
+            </div>
+        </section>
+
+        <section class="pricing" id="pricing">
+            <div class="container">
                 <div class="pricing-toggle">
                     <span>Monthly</span>
                     <label class="switch">
@@ -49,32 +200,30 @@
                         <span class="slider"></span>
                     </label>
                     <span>Yearly</span>
-                    <span class="savings">Save 20%</span>
+                    <!-- <span class="savings">Save 20%</span> -->
                 </div>
                 <div class="pricing-grid">
                     <div class="pricing-card">
                         <h3>Starter</h3>
                         <div class="price">
-                            <span class="amount" data-monthly="15" data-yearly="12">$12</span>
+                            <span class="amount" data-monthly="14" data-yearly="10">$10</span>
                             <span class="period">/user/mo</span>
                         </div>
-                        <p>Perfect for small teams getting started with AI-powered recruitment.</p>
                         <ul>
                             <li>Up to 15 active jobs</li>
                             <li>Basic AI candidate recommendations</li>
                             <li>Email support</li>
                             <li>Standard integrations</li>
                             <li>Mobile access</li>
-                        </ul>
+                        </ul><br>
                         <a href="#" class="btn btn-primary">Start free trial</a>
                     </div>
                     <div class="pricing-card popular">
                         <h3>Professional</h3>
                         <div class="price">
-                            <span class="amount" data-monthly="35" data-yearly="28">$28</span>
+                            <span class="amount" data-monthly="29" data-yearly="25">$25</span>
                             <span class="period">/user/mo</span>
                         </div>
-                        <p>Advanced features for growing teams and recruitment agencies.</p>
                         <ul>
                             <li>Unlimited active jobs</li>
                             <li>Advanced AI features & analytics</li>
@@ -88,9 +237,9 @@
                     <div class="pricing-card">
                         <h3>Enterprise</h3>
                         <div class="price">
-                            <span class="amount">Custom</span>
+                            <span class="amount" data-monthly="54" data-yearly="50">$50</span>
+                            <span class="period">/user/mo</span>
                         </div>
-                        <p>Tailored solutions for large organizations with complex needs.</p>
                         <ul>
                             <li>Everything in Professional</li>
                             <li>SAML SSO & advanced security</li>
@@ -102,68 +251,188 @@
                         <a href="#" class="btn btn-outline">Contact sales</a>
                     </div>
                 </div>
-                <div class="pricing-faq">
-                    <h2>Frequently Asked Questions</h2>
-                    <div class="faq-item">
-                        <h4>Can I change plans anytime?</h4>
-                        <p>Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the next billing cycle.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h4>Is there a setup fee?</h4>
-                        <p>No, there are no setup fees or hidden costs. Just choose your plan and get started.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h4>What payment methods do you accept?</h4>
-                        <p>We accept all major credit cards, PayPal, and bank transfers for annual plans.</p>
-                    </div>
-                </div>
+                
+                
                 <p class="pricing-note">All plans billed annually when yearly selected. Prices shown in USD.</p>
             </div>
         </section>
+
+        <section class="pricing-compare" aria-labelledby="pricing-compare-title">
+                    <h2 id="pricing-compare-title">Compare plan features</h2>
+                    <div class="compare-table rich" role="table" aria-label="Pricing feature comparison">
+                        <div class="compare-row compare-header" role="row">
+                            <div class="compare-cell sticky feature-col" role="columnheader" >Features</div>
+                            <div class="compare-cell plan-col starter" role="columnheader" style="background-color: #b9a6f4;" >Starter</div>
+                            <div class="compare-cell plan-col growth" role="columnheader" style="background-color: #8b6fe1;">Growth</div>
+                            <div class="compare-cell plan-col enterprise" role="columnheader" style="background-color: #6941C7;">Enterprise</div>
+                        </div>
+                        <div class="compare-row" role="row">
+                            <div class="compare-cell feature-col" role="cell">Monthly Applications</div>
+                            <div class="compare-cell" role="cell" style="background-color: #b9a6f4;">Up to 100</div>
+                            <div class="compare-cell" role="cell" style="background-color: #8b6fe1;">Up to 500 <span class="note">(+ $15/100 extra)</span></div>
+                            <div class="compare-cell" role="cell" style="background-color: #6941C7;">Unlimited</div>
+                        </div>
+                        <div class="compare-row" role="row">
+                            <div class="compare-cell feature-col" role="cell">Active Job Postings</div>
+                            <div class="compare-cell" role="cell" style="background-color: #b9a6f4;">5</div>
+                            <div class="compare-cell" role="cell" style="background-color: #8b6fe1;">Unlimited</div>
+                            <div class="compare-cell" role="cell" style="background-color: #6941C7;">Unlimited</div>
+                        </div>
+                        <div class="compare-row" role="row">
+                            <div class="compare-cell feature-col" role="cell">AI Candidate Matching</div>
+                            <div class="compare-cell" role="cell" style="background-color: #b9a6f4;"><span class="check"></span> Basic</div>
+                            <div class="compare-cell" role="cell" style="background-color: #8b6fe1;"><span class="check"></span> Advanced</div>
+                            <div class="compare-cell" role="cell" style="background-color: #6941C7;"><span class="check"></span> Advanced + Custom</div>
+                        </div>
+                        <div class="compare-row" role="row">
+                            <div class="compare-cell feature-col" role="cell">Analytics &amp; Reporting</div>
+                            <div class="compare-cell" role="cell" style="background-color: #b9a6f4;"><span class="x"></span></div>
+                            <div class="compare-cell" role="cell" style="background-color: #8b6fe1;"><span class="check"></span></div>
+                            <div class="compare-cell" role="cell" style="background-color: #6941C7;"><span class="check"></span> Advanced</div>
+                        </div>
+                        <div class="compare-row" role="row">
+                            <div class="compare-cell feature-col" role="cell">API Access</div>
+                            <div class="compare-cell" role="cell" style="background-color: #b9a6f4;"><span class="x"></span></div>
+                            <div class="compare-cell" role="cell" style="background-color: #8b6fe1;"><span class="check"></span></div>
+                            <div class="compare-cell" role="cell" style="background-color: #6941C7;"><span class="check"></span> + Custom APIs</div>
+                        </div>
+                        <div class="compare-row" role="row">
+                            <div class="compare-cell feature-col" role="cell">SSO Integration</div>
+                            <div class="compare-cell" role="cell" style="background-color: #b9a6f4;"><span class="x"></span></div>
+                            <div class="compare-cell" role="cell" style="background-color: #8b6fe1;"><span class="x"></span></div>
+                            <div class="compare-cell" role="cell" style="background-color: #6941C7;"><span class="check"></span> SAML SSO</div>
+                        </div>
+                        <div class="compare-row" role="row">
+                            <div class="compare-cell feature-col" role="cell">Support Level</div>
+                            <div class="compare-cell" role="cell" style="background-color: #b9a6f4;">Community</div>
+                            <div class="compare-cell" role="cell" style="background-color: #8b6fe1;">Priority Email</div>
+                            <div class="compare-cell" role="cell" style="background-color: #6941C7;">Premium Support</div>
+                        </div>
+                    </div>
+                </section>
+
+        <section class="faq-section">
+                    <div class="container">
+                        <div class="faq">
+                            <h2>Frequently Asked Questions</h2>
+                            <div class="faq-item">
+                                <div class="faq-question">Can I change plans anytime?<span class="faq-toggle">+</span></div>
+                                <div class="faq-answer">Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the next billing cycle.</div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">Is there a setup fee?<span class="faq-toggle">+</span></div>
+                                <div class="faq-answer">No, there are no setup fees or hidden costs. Just choose your plan and get started.</div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">What payment methods do you accept?<span class="faq-toggle">+</span></div>
+                                <div class="faq-answer">We accept all major credit cards, PayPal, and bank transfers for annual plans.</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+        <section class="pre-footer-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Try TalentPrism for free during 14-day with no commitment.</h2>
+                <p>No credit card required • 2 minutes to get started</p>
+                <div class="cta-buttons">
+                    <a href="pages/signin.html" class="btn btn-primary btn-large">Start Free Trial</a>
+                    <a href="#demo" class="btn btn-outline btn-large">Book a Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
     </main>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Product</h4>
-                    <ul>
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="features.html">Integrations</a></li>
-                    </ul>
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="/website/img/l.png" alt="TalentPrism">
+                    </div>
+                    <p class="footer-tagline">
+                        Revolutionizing recruitment with AI-powered talent matching and intelligent automation solutions.
+                    </p>
+                    <div class="footer-newsletter">
+                        <h5>Stay Updated</h5>
+                        <p>Get the latest insights on recruitment trends and product updates.</p>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                            <button type="submit" class="newsletter-btn">Subscribe</button>
+                        </form>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="support.html">Docs</a></li>
-                        <li><a href="support.html">Support</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="index.html#contact">Contact</a></li>
-                        <li><a href="customers.html">Customers</a></li>
-                        <li><a href="blog.html">Careers</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="privacy.html">Privacy</a></li>
-                        <li><a href="terms.html">Terms</a></li>
-                        <li><a href="privacy.html">Security</a></li>
-                    </ul>
+
+                <!-- Navigation Columns -->
+                <div class="footer-nav">
+                    <div class="footer-column">
+                        <h4> Features</h4>
+                        <ul>
+                            <li><a href="/website/pages/candidate-sourcing.html"> Candidate Sourcing</a></li>
+                            <li><a href="/website/pages/ai-candidate-enrichment.html"> AI Enrichment</a></li>
+                            <li><a href="/website/pages/analytics.html"> Analytics & Reports</a></li>
+                            <li><a href="/website/pages/applicant-tracking.html"> Applicant Tracking</a></li>
+                            <li><a href="/website/pages/ai-recommendations.html"> AI Recommendations</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4> Platform</h4>
+                        <ul>
+                            <li><a href="/website/pages/branded-career.html"> Branded Career Page</a></li>
+                            <li><a href="/website/pages/recruitment-crm.html"> Recruitment CRM</a></li>
+                            <li><a href="/website/pages/collaboration.html"> Collaboration</a></li>
+                            <li><a href="/website/pages/data-privacy.html"> Data Privacy</a></li>
+                            <li><a href="/website/pages/support.html"> Support</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4> Solutions</h4>
+                        <ul>
+                            <li><a href="pages/executive-search.html"> Executive Search</a></li>
+                            <li><a href="pages/staffing-agencies.html"> Staffing Agencies</a></li>
+                            <li><a href="pages/recruitment-agencies.html"> Recruitment Agencies</a></li>
+                            <li><a href="pages/freelance-recruiters.html"> Freelance Recruiters</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4> Company</h4>
+                        <ul>
+                            <li><a href="#about"> About Us</a></li>
+                            <li><a href="#careers"> Careers</a></li>
+                            <li><a href="#contact"> Contact</a></li>
+                            <li><a href="#blog"> Blog</a></li>
+                            <li><a href="#press"> Press Kit</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
+            <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <p>&copy; 2025 RecruitAI. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="LinkedIn"><img src="../images/linkedin-icon.svg" alt="LinkedIn"></a>
-                    <a href="#" aria-label="Twitter"><img src="../images/twitter-icon.svg" alt="Twitter"></a>
-                    <a href="#" aria-label="Facebook"><img src="../images/facebook-icon.svg" alt="Facebook"></a>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 TalentPrism. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#security">Security</a>
+                    <a href="#cookies">Cookie Policy</a>
+                </div>
+                <div class="footer-social">
+                    <h5>Follow Us</h5>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
