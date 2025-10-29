@@ -157,6 +157,8 @@ function stopAutoplay() {
 document.addEventListener('DOMContentLoaded', function() {
     // Standardize header across pages
     standardizeHeader();
+    // Standardize footer across pages
+    standardizeFooter();
 
     // Rewrite any absolute /website/* paths to work on GitHub Pages (project subpath)
     (function rewriteAbsoluteWebsitePaths(){
@@ -179,6 +181,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('a[href^="/website/"]').forEach(a => fixAttr(a, 'href'));
         document.querySelectorAll('img[src^="/website/"]').forEach(img => fixAttr(img, 'src'));
         document.querySelectorAll('link[rel="stylesheet"][href^="/website/"]').forEach(l => fixAttr(l, 'href'));
+        document.querySelectorAll('link[rel="canonical"][href^="/website/"]').forEach(l => fixAttr(l, 'href'));
         document.querySelectorAll('script[src^="/website/"]').forEach(s => fixAttr(s, 'src'));
     })();
 
@@ -628,4 +631,105 @@ function initNavigationBindings() {
                         }
                 });
         });
+}
+
+// ===============================
+// Footer normalization across site
+// ===============================
+function standardizeFooter() {
+    const footer = document.querySelector('footer.footer');
+    if (!footer) return;
+
+    const isInPages = /\/website\/pages\//.test(location.pathname.replace(/\\/g, '/'));
+    const logoPath = isInPages ? '../img/l.png' : 'img/l.png';
+    const link = (p) => isInPages ? p : `pages/${p}`;
+
+    footer.innerHTML = `
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="${logoPath}" alt="TalentPrism">
+                    </div>
+                    <p class="footer-tagline">
+                        Revolutionizing recruitment with AI-powered talent matching and intelligent automation solutions.
+                    </p>
+                    <div class="footer-newsletter">
+                        <h5>Stay Updated</h5>
+                        <p>Get the latest insights on recruitment trends and product updates.</p>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                            <button type="submit" class="newsletter-btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="footer-nav">
+                    <div class="footer-column">
+                        <h4> Features</h4>
+                        <ul>
+                            <li><a href="${link('candidate-sourcing.html')}"> Candidate Sourcing</a></li>
+                            <li><a href="${link('ai-candidate-enrichment.html')}"> AI Enrichment</a></li>
+                            <li><a href="${link('analytics.html')}"> Analytics & Reports</a></li>
+                            <li><a href="${link('applicant-tracking.html')}"> Applicant Tracking</a></li>
+                            <li><a href="${link('ai-recommendations.html')}"> AI Recommendations</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4> Platform</h4>
+                        <ul>
+                            <li><a href="${link('branded-career.html')}"> Branded Career Page</a></li>
+                            <li><a href="${link('recruitment-crm.html')}"> Recruitment CRM</a></li>
+                            <li><a href="${link('collaboration.html')}"> Collaboration</a></li>
+                            <li><a href="${link('data-privacy.html')}"> Data Privacy</a></li>
+                            <li><a href="${link('support.html')}"> Support</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4> Solutions</h4>
+                        <ul>
+                            <li><a href="${link('executive-search.html')}"> Executive Search</a></li>
+                            <li><a href="${link('staffing-agencies.html')}"> Staffing Agencies</a></li>
+                            <li><a href="${link('recruitment-agencies.html')}"> Recruitment Agencies</a></li>
+                            <li><a href="${link('freelance-recruiters.html')}"> Freelance Recruiters</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4> Company</h4>
+                        <ul>
+                            <li><a href="#about"> About Us</a></li>
+                            <li><a href="#careers"> Careers</a></li>
+                            <li><a href="${link('contact.html')}"> Contact</a></li>
+                            <li><a href="${link('blog.html')}"> Blog</a></li>
+                            <li><a href="#press"> Press Kit</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 TalentPrism. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="${link('data-privacy.html')}">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="${link('security.html')}">Security</a>
+                    <a href="#cookies">Cookie Policy</a>
+                </div>
+                <div class="footer-social">
+                    <h5>Follow Us</h5>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>`;
 }

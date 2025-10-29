@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Demo - TalentPrism</title>
+  <meta name="description" content="Schedule a live demo of TalentPrism to see how AI can power your recruitment workflow." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Mona+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <header class="header"></header>
+  <main>
+    <section style="padding:120px 0;background:linear-gradient(135deg,#eef2ff 0%,#e9d5ff 100%);">
+      <div class="container" style="max-width:1000px;margin:0 auto;text-align:center;">
+        <div style="display:inline-block;padding:8px 16px;background:rgba(109,40,217,0.1);border-radius:20px;margin-bottom:16px;">
+          <span style="color:#6d28d9;font-weight:600;font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;">Book a live demo</span>
+        </div>
+        <h1 style="font-size:3.5rem;line-height:1.1;margin-bottom:16px;color:#111827;">See TalentPrism in action</h1>
+        <p style="font-size:1.2rem;color:#6b7280;max-width:720px;margin:0 auto 40px;">Get a personalized walkthrough of the platform and learn how AI can accelerate your hiring process.</p>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;text-align:left;">
+          <div style="background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:28px;">
+            <h2 style="font-size:1.4rem;margin-bottom:12px;color:#111827;">What to expect</h2>
+            <ul style="color:#6b7280;line-height:1.8;margin:0;padding-left:18px;">
+              <li>30-minute tailored walkthrough</li>
+              <li>Answers to your specific use cases</li>
+              <li>Pricing and rollout guidance</li>
+              <li>Next steps and implementation plan</li>
+            </ul>
+          </div>
+          <div style="background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:28px;">
+            <form id="demo-form">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                <div>
+                  <label for="firstName" style="display:block;font-weight:600;margin-bottom:6px;">First name *</label>
+                  <input id="firstName" name="firstName" required style="width:100%;border:1px solid #e5e7eb;border-radius:8px;padding:12px;">
+                </div>
+                <div>
+                  <label for="lastName" style="display:block;font-weight:600;margin-bottom:6px;">Last name *</label>
+                  <input id="lastName" name="lastName" required style="width:100%;border:1px solid #e5e7eb;border-radius:8px;padding:12px;">
+                </div>
+                <div>
+                  <label for="email" style="display:block;font-weight:600;margin-bottom:6px;">Work email *</label>
+                  <input id="email" type="email" name="email" required style="width:100%;border:1px solid #e5e7eb;border-radius:8px;padding:12px;">
+                </div>
+                <div>
+                  <label for="company" style="display:block;font-weight:600;margin-bottom:6px;">Company *</label>
+                  <input id="company" name="company" required style="width:100%;border:1px solid #e5e7eb;border-radius:8px;padding:12px;">
+                </div>
+                <div>
+                  <label for="employees" style="display:block;font-weight:600;margin-bottom:6px;">Employees *</label>
+                  <select id="employees" name="employees" required style="width:100%;border:1px solid #e5e7eb;border-radius:8px;padding:12px;">
+                    <option value="">Select</option>
+                    <option>1-10</option>
+                    <option>11-50</option>
+                    <option>51-200</option>
+                    <option>201-1000</option>
+                    <option>1000+</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="country" style="display:block;font-weight:600;margin-bottom:6px;">Country *</label>
+                  <select id="country" name="country" required style="width:100%;border:1px solid #e5e7eb;border-radius:8px;padding:12px;">
+                    <option value="">Select country</option>
+                    <option>United States</option>
+                    <option>Canada</option>
+                    <option>United Kingdom</option>
+                    <option>India</option>
+                    <option>Australia</option>
+                    <option>Germany</option>
+                    <option>France</option>
+                    <option>Singapore</option>
+                    <option>United Arab Emirates</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div style="margin-top:16px;">
+                <label for="message" style="display:block;font-weight:600;margin-bottom:6px;">Anything specific?</label>
+                <textarea id="message" name="message" rows="4" style="width:100%;border:1px solid #e5e7eb;border-radius:8px;padding:12px;" placeholder="Share your use case or goals"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="margin-top:16px;">Request demo</button>
+              <p style="color:#6b7280;font-size:0.9rem;margin-top:8px;">By submitting, you agree to our Terms and Privacy Policy.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"></footer>
+  <script src="../js/script.js"></script>
+  <script>
+    document.getElementById('demo-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      console.log('Demo request:', Object.fromEntries(new FormData(this).entries()));
+      this.reset();
+      alert('Thanks! We\'ll be in touch shortly to schedule your demo.');
+    });
+  </script>
+</body>
+</html>
