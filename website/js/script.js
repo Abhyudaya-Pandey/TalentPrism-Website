@@ -560,7 +560,12 @@ function standardizeHeader() {
         const header = document.querySelector('header.header');
         if (!header) return;
 
-    const isInPages = /\/website\/pages\//.test(location.pathname.replace(/\\/g, '/'));
+    // Detect if current page is under a `pages` directory regardless of repo subpath or whether
+    // the site root is the repo root or the `website` folder. This works for:
+    // - Local: /.../website/pages/...
+    // - GitHub Pages (root set to website/): /<repo>/pages/...
+    // - GitHub Pages (root set to repo): /<repo>/website/pages/...
+    const isInPages = /\/pages\//.test(location.pathname.replace(/\\/g, '/'));
     const logoPath = isInPages ? '../img/l.png' : 'img/l.png';
     const link = (p) => isInPages ? p : `pages/${p}`;
     const logoHref = isInPages ? '../index.html' : 'index.html';

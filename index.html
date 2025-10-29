@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0; url=website/index.html">
+  <title>Redirecting…</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    (function(){
+      var target = 'website/index.html';
+      // Preserve any query/hash for convenience
+      if (location.search || location.hash) {
+        target += location.search + location.hash;
+      }
+      location.replace(target);
+    })();
+  </script>
+  <style>
+    html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif}
+    .wrap{height:100%;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div>
+      <h1>Redirecting…</h1>
+      <p>If you are not redirected automatically, <a href="website/index.html">click here</a>.</p>
+    </div>
+  </div>
+</body>
+</html>
