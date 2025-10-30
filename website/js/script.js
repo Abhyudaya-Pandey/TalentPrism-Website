@@ -125,22 +125,24 @@ if (sliderRight) {
     sliderRight.addEventListener('click', nextSlide);
 }
 
-sliderDots.forEach((dot, index) => {
-    dot.addEventListener('click', () => goToSlide(index));
-});
+if (sliderDots && sliderDots.length) {
+    sliderDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToSlide(index));
+    });
+}
 
 // Make feature slides clickable to advance
-featureSlides.forEach((slide, index) => {
-    const slideWrap = slide.querySelector('.features-slide-wrap');
-    if (slideWrap) {
-        slideWrap.addEventListener('click', (e) => {
-            // Prevent default link behavior
-            e.preventDefault();
-            // Advance to next slide
-            nextSlide();
-        });
-    }
-});
+if (featureSlides && featureSlides.length) {
+    featureSlides.forEach((slide) => {
+        const slideWrap = slide.querySelector('.features-slide-wrap');
+        if (slideWrap) {
+            slideWrap.addEventListener('click', (e) => {
+                e.preventDefault();
+                nextSlide();
+            });
+        }
+    });
+}
 
 // Auto-play functionality (optional)
 let autoplayInterval;
@@ -182,9 +184,11 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('script[src^="/website/"]').forEach(s => fixAttr(s, 'src'));
     })();
 
-    // Slider initialization
-    updateSlider(); // Initialize slider position
-    startAutoplay();
+    // Slider initialization (only if we have slides)
+    if (totalSlides > 0) {
+        updateSlider(); // Initialize slider position
+        if (totalSlides > 1) startAutoplay();
+    }
     
     // Pause autoplay on hover
     if (featuresSlider) {
@@ -291,10 +295,14 @@ function showAnalyticsBanner() {
 
 // Keyboard navigation improvements
 document.addEventListener('keydown', function(e) {
-    // Close mobile menu with Escape
-    if (e.key === 'Escape' && nav.classList.contains('active')) {
-        nav.classList.remove('active');
-        mobileMenuToggle.classList.remove('active');
+    // Close mobile menu with Escape (guard for null elements)
+    if (e.key === 'Escape') {
+        const navEl = document.querySelector('.nav');
+        const toggleEl = document.querySelector('.mobile-menu-toggle');
+        if (navEl && navEl.classList.contains('active')) {
+            navEl.classList.remove('active');
+            if (toggleEl) toggleEl.classList.remove('active');
+        }
     }
 });
 
@@ -528,6 +536,9 @@ function initModernFAQAccordion() {
 // Inject unified FAQ if missing
 // ===============================
 function ensureFaqSection() {
+    // Skip FAQ injection on signin page
+    if (location.pathname.includes('signin.html')) return;
+    
     if (document.querySelector('.faq-section, .faq-section-modern, .faq-accordion')) return;
         const main = document.querySelector('main') || document.body;
         const section = document.createElement('section');
@@ -634,3 +645,101 @@ function initNavigationBindings() {
                 });
         });
 }
+
+// Demo form functionality
+function initDemoForm() {
+    const demoForm = document.getElementById('demo-form');
+    if (!demoForm) return;
+
+    // Form validation and submission
+    demoForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Basic validation
+        const requiredFields = demoForm.querySelectorAll('[required]');
+        let isValid = true;
+
+        requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+                field.style.borderColor = '#ef4444';
+                field.style.boxShadow = '0 0 0 3px rgba(239, 68, 68, 0.1)';
+                isValid = false;
+            } else {
+                field.style.borderColor = '#10b981';
+                field.style.boxShadow = '0 0 0 3px rgba(16, 185, 129, 0.1)';
+            }
+        });
+
+        if (isValid) {
+            // Show success message
+            const submitBtn = demoForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = '✓ Demo Scheduled!';
+            submitBtn.style.background = '#10b981';
+            submitBtn.disabled = true;
+
+            // Reset form after 3 seconds
+            setTimeout(() => {
+                demoForm.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.style.background = '';
+                submitBtn.disabled = false;
+
+                // Reset field styles
+                requiredFields.forEach(field => {
+                    field.style.borderColor = '#e5e7eb';
+                    field.style.boxShadow = 'none';
+                });
+            }, 3000);
+
+            // Here you would typically send the form data to your backend
+            console.log('Demo form submitted successfully!');
+        }
+    });
+
+    // Real-time validation feedback
+    const inputs = demoForm.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => {
+        input.addEventListener('blur', function() {
+            if (this.hasAttribute('required') && !this.value.trim()) {
+                this.style.borderColor = '#ef4444';
+                this.style.boxShadow = '0 0 0 3px rgba(239, 68, 68, 0.1)';
+            } else if (this.value.trim()) {
+                this.style.borderColor = '#10b981';
+                this.style.boxShadow = '0 0 0 3px rgba(16, 185, 129, 0.1)';
+            }
+        });
+
+        input.addEventListener('input', function() {
+            if (this.style.borderColor !== 'rgb(239, 68, 68)') {
+                this.style.borderColor = '#e5e7eb';
+                this.style.boxShadow = 'none';
+            }
+        });
+    });
+}
+
+// Smooth scroll to demo form
+function scrollToDemoForm() {
+    const demoFormSection = document.getElementById('demo-form');
+    if (demoFormSection) {
+        demoFormSection.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+}
+
+// Initialize demo form when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initDemoForm();
+
+    // Add click handlers for demo CTA buttons
+    const demoButtons = document.querySelectorAll('a[href="#demo-form"], a[href="#demo"]');
+    demoButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            scrollToDemoForm();
+        });
+    });
+});

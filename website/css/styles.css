@@ -2304,6 +2304,8 @@ input:checked+.slider:before {
 }
 
 .auth-wrapper {
+    margin: 80px 0;
+    padding:20px;
     display: flex;
     min-height: 100vh;
     position: relative;
@@ -4298,4 +4300,77 @@ body.no-scroll {
     .contact-form .form-row {
         grid-template-columns: 1fr;
     }
+}
+
+/* Demo Page Specific Styles */
+.demo-form-section .form-group input:focus,
+.demo-form-section .form-group select:focus,
+.demo-form-section .form-group textarea:focus {
+    border-color: #6941C7;
+    background: #fefefe;
+    box-shadow: 0 0 0 3px rgba(105, 65, 199, 0.1);
+    transform: translateY(-1px);
+}
+
+.demo-form-section .form-group input:hover,
+.demo-form-section .form-group select:hover,
+.demo-form-section .form-group textarea:hover {
+    border-color: #c3adf7;
+}
+
+.demo-form-section .btn-primary:hover {
+    background: linear-gradient(135deg, #5a32a3 0%, #432080 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(105, 65, 199, 0.3);
+}
+
+.demo-form-section .btn-outline:hover {
+    background: rgba(105, 65, 199, 0.1);
+    border-color: #6941C7;
+    color: #6941C7;
+    transform: translateY(-2px);
+}
+
+.benefit-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.process-step:hover .process-step div:first-child {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(105, 65, 199, 0.3);
+}
+
+.hero-visual:hover {
+    transform: scale(1.02);
+}
+
+.hero-visual {
+    transition: transform 0.3s ease;
+}
+
+.benefit-card,
+.testimonial-card,
+.process-step div:first-child {
+    transition: all 0.3s ease;
+}
+
+/* Form validation styles */
+.demo-form-section .form-group input:invalid:not(:placeholder-shown),
+.demo-form-section .form-group select:invalid:not(:placeholder-shown),
+.demo-form-section .form-group textarea:invalid:not(:placeholder-shown) {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.demo-form-section .form-group input:valid:not(:placeholder-shown),
+.demo-form-section .form-group select:valid:not(:placeholder-shown),
+.demo-form-section .form-group textarea:valid:not(:placeholder-shown) {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
 }

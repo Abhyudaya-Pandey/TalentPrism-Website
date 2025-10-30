@@ -182,47 +182,167 @@
     </header>
 
     <main>
-        <section class="hero" style="padding: 80px 0;">
+        <!-- Hero Section -->
+        <section class="hero-section" style="padding:120px 0 80px;background:linear-gradient(135deg,#f0f4ff 0%,#e6efff 100%);position:relative;overflow:hidden;">
             <div class="container">
-                <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
-                    <h1>See RecruitAI in action</h1>
-                    <p>Schedule a personalized demo and discover how RecruitAI can transform your recruitment process.</p>
+                <div class="hero-grid" style="display:grid;grid-template-columns:1.2fr 0.8fr;gap:80px;align-items:center;">
+                    <div class="hero-content">
+                        <div style="display:inline-block;padding:8px 16px;background:rgba(105,65,199,0.1);border-radius:20px;margin-bottom:20px;">
+                            <span style="color:#6941C7;font-weight:600;font-size:0.9rem;">🎯 PERSONALIZED DEMO</span>
+                        </div>
+                        <h1 style="font-size:4rem;font-weight:700;line-height:1.1;margin-bottom:24px;color:#1a1a1a;">See TalentPrism in Action</h1>
+                        <p style="font-size:1.3rem;color:#5a6c7d;margin-bottom:36px;line-height:1.6;">Experience how our AI-powered recruitment platform transforms your hiring process. Get a personalized walkthrough tailored to your specific needs and challenges.</p>
+                        <div class="hero-ctas" style="display:flex;gap:16px;margin-bottom:32px;">
+                            <a href="#demo-form" class="btn btn-primary btn-large" style="padding:16px 32px;font-size:1.1rem;">Schedule Your Demo</a>
+                            <a href="signin.html" class="btn btn-outline btn-large" style="padding:16px 32px;font-size:1.1rem;">Start Free Trial</a>
+                        </div>
+                        <div style="display:flex;gap:32px;padding-top:24px;border-top:1px solid #e0e7ff;">
+                            <div>
+                                <div style="font-size:2rem;font-weight:700;color:#6941C7;">30 min</div>
+                                <div style="font-size:0.9rem;color:#6c757d;">Demo Duration</div>
+                            </div>
+                            <div>
+                                <div style="font-size:2rem;font-weight:700;color:#6941C7;">24h</div>
+                                <div style="font-size:0.9rem;color:#6c757d;">Response Time</div>
+                            </div>
+                            <div>
+                                <div style="font-size:2rem;font-weight:700;color:#6941C7;">100%</div>
+                                <div style="font-size:0.9rem;color:#6c757d;">Personalized</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div style="position:relative;">
+                            <img src="../img/demo-screenshot.png" alt="TalentPrism Demo Interface" style="width:100%;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,0.15);" onerror="this.src='../img/dashboard-preview.png'">
+                            <div style="position:absolute;top:-10px;right:-10px;background:#10b981;border-radius:50%;width:60px;height:60px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(16,185,129,0.3);">
+                                <i class="fas fa-play" style="color:white;font-size:1.2rem;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Background decoration -->
+            <div style="position:absolute;top:0;right:0;width:400px;height:400px;background:radial-gradient(circle,#c3adf7 0%,transparent 70%);border-radius:50%;transform:translate(50%,-50%);opacity:0.3;"></div>
+            <div style="position:absolute;bottom:0;left:0;width:300px;height:300px;background:radial-gradient(circle,#6941C7 0%,transparent 70%);border-radius:50%;transform:translate(-50%,50%);opacity:0.2;"></div>
+        </section>
+
+        <!-- Demo Benefits Section -->
+        <section class="demo-benefits-section" style="padding:100px 0;background:#fff;">
+            <div class="container">
+                <div class="section-header" style="text-align:center;margin-bottom:70px;">
+                    <div style="display:inline-block;padding:8px 16px;background:rgba(105,65,199,0.1);border-radius:20px;margin-bottom:16px;">
+                        <span style="color:#6941C7;font-weight:600;font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;">WHY BOOK A DEMO</span>
+                    </div>
+                    <h2 style="font-size:3rem;font-weight:700;margin-bottom:20px;color:#1a1a1a;">Experience the Future of Recruitment</h2>
+                    <p style="font-size:1.2rem;color:#6c757d;max-width:700px;margin:0 auto;">See how TalentPrism's AI-powered platform can revolutionize your hiring process with a personalized demonstration.</p>
+                </div>
+                <div class="benefits-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;margin-bottom:80px;">
+                    <div class="benefit-card" style="text-align:center;padding:40px;border:1px solid #e9ecef;border-radius:16px;transition:all 0.3s ease;background:#fff;">
+                        <div style="width:80px;height:80px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
+                            <i class="fas fa-user-check" style="color:#fff;font-size:2rem;"></i>
+                        </div>
+                        <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:16px;color:#1a1a1a;">Personalized Walkthrough</h3>
+                        <p style="color:#6c757d;line-height:1.7;margin-bottom:0;">Get a tailored demo based on your industry, team size, and specific recruitment challenges.</p>
+                    </div>
+                    <div class="benefit-card" style="text-align:center;padding:40px;border:1px solid #e9ecef;border-radius:16px;transition:all 0.3s ease;background:#fff;">
+                        <div style="width:80px;height:80px;background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
+                            <i class="fas fa-brain" style="color:#fff;font-size:2rem;"></i>
+                        </div>
+                        <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:16px;color:#1a1a1a;">AI in Action</h3>
+                        <p style="color:#6c757d;line-height:1.7;margin-bottom:0;">Witness our AI algorithms match candidates, enrich profiles, and provide intelligent recommendations.</p>
+                    </div>
+                    <div class="benefit-card" style="text-align:center;padding:40px;border:1px solid #e9ecef;border-radius:16px;transition:all 0.3s ease;background:#fff;">
+                        <div style="width:80px;height:80px;background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
+                            <i class="fas fa-chart-line" style="color:#fff;font-size:2rem;"></i>
+                        </div>
+                        <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:16px;color:#1a1a1a;">Live Analytics</h3>
+                        <p style="color:#6c757d;line-height:1.7;margin-bottom:0;">See real-time dashboards, performance metrics, and ROI calculations with your sample data.</p>
+                    </div>
+                    <div class="benefit-card" style="text-align:center;padding:40px;border:1px solid #e9ecef;border-radius:16px;transition:all 0.3s ease;background:#fff;">
+                        <div style="width:80px;height:80px;background:linear-gradient(135deg,#fa709a 0%,#fee140 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
+                            <i class="fas fa-comments" style="color:#fff;font-size:2rem;"></i>
+                        </div>
+                        <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:16px;color:#1a1a1a;">Expert Q&A</h3>
+                        <p style="color:#6c757d;line-height:1.7;margin-bottom:0;">Ask our product experts anything about features, integrations, security, and implementation.</p>
+                    </div>
+                </div>
+
+                <!-- Demo Process -->
+                <div class="demo-process" style="background:linear-gradient(135deg,#f8fafc 0%,#f1f5f9 100%);border-radius:20px;padding:60px;margin-bottom:80px;">
+                    <h3 style="font-size:2.5rem;font-weight:700;text-align:center;margin-bottom:16px;color:#1a1a1a;">How It Works</h3>
+                    <p style="font-size:1.1rem;color:#6c757d;text-align:center;margin-bottom:50px;">Your personalized demo journey in 4 simple steps</p>
+                    <div class="process-steps" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;">
+                        <div class="process-step" style="text-align:center;">
+                            <div style="width:60px;height:60px;background:#6941C7;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:white;font-size:1.5rem;font-weight:700;">1</div>
+                            <h4 style="font-size:1.2rem;font-weight:600;margin-bottom:12px;color:#1a1a1a;">Book Your Slot</h4>
+                            <p style="color:#6c757d;line-height:1.6;">Choose a convenient time from our calendar. We'll send confirmation within minutes.</p>
+                        </div>
+                        <div class="process-step" style="text-align:center;">
+                            <div style="width:60px;height:60px;background:#6941C7;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:white;font-size:1.5rem;font-weight:700;">2</div>
+                            <h4 style="font-size:1.2rem;font-weight:600;margin-bottom:12px;color:#1a1a1a;">Preparation</h4>
+                            <p style="color:#6c757d;line-height:1.6;">Our team reviews your requirements and prepares a customized demo experience.</p>
+                        </div>
+                        <div class="process-step" style="text-align:center;">
+                            <div style="width:60px;height:60px;background:#6941C7;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:white;font-size:1.5rem;font-weight:700;">3</div>
+                            <h4 style="font-size:1.2rem;font-weight:600;margin-bottom:12px;color:#1a1a1a;">Live Demo</h4>
+                            <p style="color:#6c757d;line-height:1.6;">30-minute interactive session showcasing TalentPrism's key features and capabilities.</p>
+                        </div>
+                        <div class="process-step" style="text-align:center;">
+                            <div style="width:60px;height:60px;background:#6941C7;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:white;font-size:1.5rem;font-weight:700;">4</div>
+                            <h4 style="font-size:1.2rem;font-weight:600;margin-bottom:12px;color:#1a1a1a;">Next Steps</h4>
+                            <p style="color:#6c757d;line-height:1.6;">Receive implementation roadmap, pricing details, and onboarding guidance.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="demo-content">
+        <!-- Demo Form Section -->
+        <section id="demo-form" class="demo-form-section" style="padding:100px 0;background:linear-gradient(135deg,#f8fafc 0%,#f1f5f9 100%);">
             <div class="container">
-                <div class="demo-grid">
-                    <div class="demo-form">
-                        <h2>Book your demo</h2>
-                        <form id="demo-form">
+                <div class="form-container" style="max-width:1000px;margin:0 auto;">
+                    <div class="form-header" style="text-align:center;margin-bottom:50px;">
+                        <h2 style="font-size:3rem;font-weight:700;margin-bottom:16px;color:#1a1a1a;">Schedule Your Demo</h2>
+                        <p style="font-size:1.2rem;color:#6c757d;">Fill out the form below and we'll get back to you within 24 hours with available time slots.</p>
+                    </div>
+
+                    <div class="form-card" style="background:#fff;border-radius:20px;padding:60px;box-shadow:0 20px 60px rgba(0,0,0,0.08);">
+                        <form id="demo-form" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
                             <div class="form-group">
-                                <label for="name">Full Name *</label>
-                                <input type="text" id="name" name="name" required>
+                                <label for="first-name" style="display:block;margin-bottom:8px;font-weight:600;color:#374151;">First Name *</label>
+                                <input type="text" id="first-name" name="first-name" required style="width:100%;padding:16px 20px;border:2px solid #e5e7eb;border-radius:12px;font-size:16px;font-family:'Mona Sans',sans-serif;transition:all 0.3s ease;outline:none;" placeholder="Enter your first name">
                             </div>
                             <div class="form-group">
-                                <label for="email">Work Email *</label>
-                                <input type="email" id="email" name="email" required>
+                                <label for="last-name" style="display:block;margin-bottom:8px;font-weight:600;color:#374151;">Last Name *</label>
+                                <input type="text" id="last-name" name="last-name" required style="width:100%;padding:16px 20px;border:2px solid #e5e7eb;border-radius:12px;font-size:16px;font-family:'Mona Sans',sans-serif;transition:all 0.3s ease;outline:none;" placeholder="Enter your last name">
                             </div>
                             <div class="form-group">
-                                <label for="company">Company *</label>
-                                <input type="text" id="company" name="company" required>
+                                <label for="email" style="display:block;margin-bottom:8px;font-weight:600;color:#374151;">Work Email *</label>
+                                <input type="email" id="email" name="email" required style="width:100%;padding:16px 20px;border:2px solid #e5e7eb;border-radius:12px;font-size:16px;font-family:'Mona Sans',sans-serif;transition:all 0.3s ease;outline:none;" placeholder="your.email@company.com">
                             </div>
                             <div class="form-group">
-                                <label for="role">Your Role</label>
-                                <select id="role" name="role">
+                                <label for="phone" style="display:block;margin-bottom:8px;font-weight:600;color:#374151;">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" style="width:100%;padding:16px 20px;border:2px solid #e5e7eb;border-radius:12px;font-size:16px;font-family:'Mona Sans',sans-serif;transition:all 0.3s ease;outline:none;" placeholder="+1 (555) 123-4567">
+                            </div>
+                            <div class="form-group">
+                                <label for="company" style="display:block;margin-bottom:8px;font-weight:600;color:#374151;">Company *</label>
+                                <input type="text" id="company" name="company" required style="width:100%;padding:16px 20px;border:2px solid #e5e7eb;border-radius:12px;font-size:16px;font-family:'Mona Sans',sans-serif;transition:all 0.3s ease;outline:none;" placeholder="Company name">
+                            </div>
+                            <div class="form-group">
+                                <label for="role" style="display:block;margin-bottom:8px;font-weight:600;color:#374151;">Your Role *</label>
+                                <select id="role" name="role" required style="width:100%;padding:16px 20px;border:2px solid #e5e7eb;border-radius:12px;font-size:16px;font-family:'Mona Sans',sans-serif;transition:all 0.3s ease;outline:none;background:#fff;">
                                     <option value="">Select your role</option>
                                     <option value="hr">HR Manager</option>
                                     <option value="recruiter">Recruiter</option>
                                     <option value="ceo">CEO/Founder</option>
                                     <option value="hiring">Hiring Manager</option>
+                                    <option value="talent">Talent Acquisition</option>
                                     <option value="other">Other</option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <label for="team-size">Team Size</label>
-                                <select id="team-size" name="team-size">
+                            <div class="form-group" style="grid-column:span 2;">
+                                <label for="team-size" style="display:block;margin-bottom:8px;font-weight:600;color:#374151;">Team Size *</label>
+                                <select id="team-size" name="team-size" required style="width:100%;padding:16px 20px;border:2px solid #e5e7eb;border-radius:12px;font-size:16px;font-family:'Mona Sans',sans-serif;transition:all 0.3s ease;outline:none;background:#fff;">
                                     <option value="">Select team size</option>
                                     <option value="1-5">1-5 people</option>
                                     <option value="6-20">6-20 people</option>
@@ -231,43 +351,105 @@
                                     <option value="100+">100+ people</option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <label for="message">Tell us about your needs</label>
-                                <textarea id="message" name="message" rows="4" placeholder="What are your biggest recruitment challenges?"></textarea>
+                            <div class="form-group" style="grid-column:span 2;">
+                                <label for="message" style="display:block;margin-bottom:8px;font-weight:600;color:#374151;">Tell us about your recruitment challenges</label>
+                                <textarea id="message" name="message" rows="4" style="width:100%;padding:16px 20px;border:2px solid #e5e7eb;border-radius:12px;font-size:16px;font-family:'Mona Sans',sans-serif;transition:all 0.3s ease;outline:none;resize:vertical;" placeholder="What are your biggest recruitment challenges? What are you hoping to achieve with TalentPrism?"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Schedule Demo</button>
+                            <div class="form-group" style="grid-column:span 2;text-align:center;margin-top:20px;">
+                                <button type="submit" class="btn btn-primary btn-large" style="padding:18px 40px;font-size:1.1rem;font-weight:600;border-radius:12px;min-width:200px;">Schedule My Demo</button>
+                                <p style="margin-top:16px;font-size:0.9rem;color:#6c757d;">By submitting this form, you agree to our <a href="#" style="color:#6941C7;text-decoration:underline;">Privacy Policy</a> and <a href="#" style="color:#6941C7;text-decoration:underline;">Terms of Service</a>.</p>
+                            </div>
                         </form>
-                    </div>
-                    <div class="demo-info">
-                        <h3>What to expect</h3>
-                        <ul>
-                            <li>Personalized walkthrough of RecruitAI features</li>
-                            <li>Live demonstration with your use cases</li>
-                            <li>Q&A session with our product experts</li>
-                            <li>Custom recommendations for your team</li>
-                        </ul>
-                        <h3>Demo duration: 30 minutes</h3>
-                        <p>We'll send you a calendar invite with available time slots within 24 hours.</p>
-                        <div class="demo-benefits">
-                            <h4>Why book a demo?</h4>
-                            <div class="benefit">
-                                <img src="../images/icon-ai.svg" alt="AI" loading="lazy">
-                                <span>See AI recommendations in action</span>
-                            </div>
-                            <div class="benefit">
-                                <img src="../images/icon-pipeline.svg" alt="Pipeline" loading="lazy">
-                                <span>Explore pipeline management</span>
-                            </div>
-                            <div class="benefit">
-                                <img src="../images/analytics-screenshot.svg" alt="Analytics" loading="lazy">
-                                <span>Review analytics capabilities</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Trust & Social Proof Section -->
+    <section class="trust-section" style="padding:100px 0;background:#fff;">
+        <div class="container">
+            <div class="trust-header" style="text-align:center;margin-bottom:70px;">
+                <h2 style="font-size:3rem;font-weight:700;margin-bottom:16px;color:#1a1a1a;">Trusted by Industry Leaders</h2>
+                <p style="font-size:1.2rem;color:#6c757d;max-width:600px;margin:0 auto;">Join thousands of recruitment professionals who have transformed their hiring process with TalentPrism.</p>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:40px;margin-bottom:80px;">
+                <div class="stat-item" style="text-align:center;">
+                    <div style="font-size:3rem;font-weight:700;color:#6941C7;margin-bottom:8px;">10,000+</div>
+                    <div style="font-size:1rem;color:#6c757d;">Demos Completed</div>
+                </div>
+                <div class="stat-item" style="text-align:center;">
+                    <div style="font-size:3rem;font-weight:700;color:#6941C7;margin-bottom:8px;">98%</div>
+                    <div style="font-size:1rem;color:#6c757d;">Customer Satisfaction</div>
+                </div>
+                <div class="stat-item" style="text-align:center;">
+                    <div style="font-size:3rem;font-weight:700;color:#6941C7;margin-bottom:8px;">24h</div>
+                    <div style="font-size:1rem;color:#6c757d;">Average Response Time</div>
+                </div>
+                <div class="stat-item" style="text-align:center;">
+                    <div style="font-size:3rem;font-weight:700;color:#6941C7;margin-bottom:8px;">500+</div>
+                    <div style="font-size:1rem;color:#6c757d;">Enterprise Clients</div>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="testimonials-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:32px;margin-bottom:80px;">
+                <div class="testimonial-card" style="background:#f8fafc;border-radius:16px;padding:32px;border:1px solid #e9ecef;">
+                    <div style="display:flex;gap:16px;margin-bottom:20px;">
+                        <div style="width:50px;height:50px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;">SJ</div>
+                        <div>
+                            <div style="font-weight:600;color:#1a1a1a;">Sarah Johnson</div>
+                            <div style="font-size:0.9rem;color:#6c757d;">VP of Talent Acquisition, TechCorp</div>
+                        </div>
+                    </div>
+                    <p style="color:#374151;line-height:1.6;margin-bottom:16px;">"The demo was incredibly insightful. Our team learned exactly how TalentPrism could streamline our recruitment process and improve our time-to-hire by 40%."</p>
+                    <div style="display:flex;color:#fbbf24;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card" style="background:#f8fafc;border-radius:16px;padding:32px;border:1px solid #e9ecef;">
+                    <div style="display:flex;gap:16px;margin-bottom:20px;">
+                        <div style="width:50px;height:50px;background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;">MR</div>
+                        <div>
+                            <div style="font-weight:600;color:#1a1a1a;">Michael Rodriguez</div>
+                            <div style="font-size:0.9rem;color:#6c757d;">HR Director, GlobalTech</div>
+                        </div>
+                    </div>
+                    <p style="color:#374151;line-height:1.6;margin-bottom:16px;">"The personalized demo addressed all our pain points. The AI recommendations feature alone would save us countless hours each week."</p>
+                    <div style="display:flex;color:#fbbf24;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="testimonial-card" style="background:#f8fafc;border-radius:16px;padding:32px;border:1px solid #e9ecef;">
+                    <div style="display:flex;gap:16px;margin-bottom:20px;">
+                        <div style="width:50px;height:50px;background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;">LC</div>
+                        <div>
+                            <div style="font-weight:600;color:#1a1a1a;">Lisa Chen</div>
+                            <div style="font-size:0.9rem;color:#6c757d;">Recruitment Manager, InnovateLabs</div>
+                        </div>
+                    </div>
+                    <p style="color:#374151;line-height:1.6;margin-bottom:16px;">"Outstanding demo experience! The team took the time to understand our unique challenges and showed us exactly how TalentPrism would solve them."</p>
+                    <div style="display:flex;color:#fbbf24;">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Indicators -->
+            <div class="trust-indicators" style="text-align:center;">
+                <p style="font-size:1.1rem;color:#6c757d;margin-bottom:32px;">Trusted by leading companies worldwide</p>
+                <div style="display:flex;justify-content:center;gap:60px;flex-wrap:wrap;opacity:0.6;">
+                    <div style="font-size:1.5rem;font-weight:700;color:#6c757d;">TechCorp</div>
+                    <div style="font-size:1.5rem;font-weight:700;color:#6c757d;">GlobalTech</div>
+                    <div style="font-size:1.5rem;font-weight:700;color:#6c757d;">InnovateLabs</div>
+                    <div style="font-size:1.5rem;font-weight:700;color:#6c757d;">DataFlow</div>
+                    <div style="font-size:1.5rem;font-weight:700;color:#6c757d;">CloudSync</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container">
