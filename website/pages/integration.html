@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,79 +10,57 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Mona+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css?v=2025-11-01">
     <link rel="canonical" href="integration.html">
 </head>
 <body>
     <header class="header" role="banner">
         <div class="container">
             <div class="logo">
-                <a href="../index.html" aria-label="TalentPrism Home">
-                    <img src="../img/l.png" alt="TalentPrism Logo" width="auto" height="70">
-                </a>
+                <a href="../index.html"><img src="../img/l.png" alt="TalentPrism Logo" style="width: auto;"></a>
             </div>
-            <nav class="nav" role="navigation" aria-label="Main navigation">
-                <ul role="menubar">
-                    <li class="dropdown" role="none">
-                        <a href="#features" role="menuitem" aria-haspopup="true" aria-expanded="false">
-                            Features <span class="dropdown-arrow" aria-hidden="true">▼</span>
-                        </a>
-                        <ul class="dropdown-menu" role="menu" aria-label="Features menu">
-                            <li role="none">
-                                <a href="candidate-sourcing.html" role="menuitem">
-                                    <i class="fas fa-user-plus" aria-hidden="true"></i>
+            <nav class="nav">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#features">Features <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="candidate-sourcing.html">
+                                    <i class="fas fa-user-plus"></i>
                                     <div class="dropdown-item-content">
                                         <strong>Candidate Sourcing</strong>
                                         <span>Find top talent from multiple sources</span>
                                     </div>
                                 </a>
                             </li>
-                            <li role="none">
-                                <a href="ai-candidate-enrichment.html" role="menuitem">
-                                    <i class="fas fa-user" aria-hidden="true"></i>
+                            <li>
+                                <a href="ai-candidate-enrichment.html">
+                                    <i class="fas fa-user"></i>
                                     <div class="dropdown-item-content">
                                         <strong>AI Candidate Enrichment</strong>
                                         <span>Enhance profiles with AI insights</span>
                                     </div>
                                 </a>
                             </li>
-                            <li role="none">
-                                <a href="analytics.html" role="menuitem">
-                                    <i class="fas fa-chart-bar" aria-hidden="true"></i>
-                                    <div class="dropdown-item-content">
-                                        <strong>Analytics & Reports</strong>
-                                        <span>Data-driven recruitment insights</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li role="none">
-                                <a href="support.html" role="menuitem">
-                                    <i class="fas fa-headset" aria-hidden="true"></i>
-                                    <div class="dropdown-item-content">
-                                        <strong>Support & Assistance</strong>
-                                        <span>24/7 expert help and guidance</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li role="none">
-                                <a href="applicant-tracking.html" role="menuitem">
-                                    <i class="fas fa-users" aria-hidden="true"></i>
+                            <li>
+                                <a href="applicant-tracking.html">
+                                    <i class="fas fa-users"></i>
                                     <div class="dropdown-item-content">
                                         <strong>Applicant Tracking System</strong>
                                         <span>Streamline your hiring pipeline</span>
                                     </div>
                                 </a>
                             </li>
-                            <li role="none">
-                                <a href="ai-recommendations.html" role="menuitem">
-                                    <i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i>
+                            <li>
+                                <a href="ai-recommendations.html">
+                                    <i class="fas fa-wand-magic-sparkles"></i>
                                     <div class="dropdown-item-content">
                                         <strong>AI Recommendations</strong>
                                         <span>Smart candidate matching</span>
                                     </div>
                                 </a>
                             </li>
-                            <li role="none">
+                            <li>
                                 <a href="branded-career.html" role="menuitem">
                                     <i class="fas fa-award" aria-hidden="true"></i>
                                     <div class="dropdown-item-content">
@@ -133,54 +111,114 @@
                         <a href="#solutions" role="menuitem" aria-haspopup="true" aria-expanded="false">
                             Solutions <span class="dropdown-arrow" aria-hidden="true">▼</span>
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-solutions" role="menu" aria-label="Solutions menu">
-                            <li role="none">
-                                <a href="freelance-recruiters.html" role="menuitem">
-                                    <i class="fas fa-user-tie" aria-hidden="true"></i>
-                                    <div class="dropdown-item-content">
-                                        <strong>Freelance Recruiters</strong>
-                                        <span>Tools for independent recruitment professionals</span>
+                        <div class="dropdown-menu solutions-mega-new">
+                            <div class="solutions-sidebar">
+                                <h4>SOLUTIONS</h4>
+                                <ul class="solutions-nav">
+                                    <li><a href="#" class="solutions-nav-item active" data-target="recruitment-agencies">For Recruitment Agencies <i class="fas fa-chevron-right"></i></a></li>
+                                    <!-- <li><a href="#" class="solutions-nav-item" data-target="use-cases">Use Cases <i class="fas fa-chevron-right"></i></a></li> -->
+                                </ul>
+                            </div>
+                            <div class="solutions-content">
+                                <!-- For Recruitment Agencies -->
+                                <div class="solutions-panel active" id="recruitment-agencies">
+                                    <div class="solutions-grid">
+                                        <a href="executive-search.html" class="solution-card">
+                                            <i class="fas fa-briefcase"></i>
+                                            <div class="solution-card-content">
+                                                <strong>Executive Search</strong>
+                                                <span>Tools for top-tier hiring and client management.</span>
+                                            </div>
+                                        </a>
+                                        <a href="staffing-agencies.html" class="solution-card">
+                                            <i class="fas fa-plus-circle"></i>
+                                            <div class="solution-card-content">
+                                                <strong>Staffing Agencies</strong>
+                                                <span>Scalable ATS and CRM to streamline all placements.</span>
+                                            </div>
+                                        </a>
+                                        <a href="recruitment-agencies.html" class="solution-card">
+                                            <i class="fas fa-users-cog"></i>
+                                            <div class="solution-card-content">
+                                                <strong>Recruitment Agencies</strong>
+                                                <span>Customizable workflows for your recruitment success.</span>
+                                            </div>
+                                        </a>
+                                        <a href="freelance-recruiters.html" class="solution-card">
+                                            <i class="fas fa-user-tie"></i>
+                                            <div class="solution-card-content">
+                                                <strong>Freelance Recruiters</strong>
+                                                <span>Cost efficient to manage your freelance business.</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </li>
-                            <li role="none">
-                                <a href="staffing-agencies.html" role="menuitem">
-                                    <i class="fas fa-building" aria-hidden="true"></i>
-                                    <div class="dropdown-item-content">
-                                        <strong>Staffing Agencies</strong>
-                                        <span>Complete staffing agency management platform</span>
+                                </div>
+                                <!-- Use Cases -->
+                                <div class="solutions-panel" id="use-cases">
+                                    <div class="solutions-grid">
+                                        <a href="high-volume-recruiting.html" class="solution-card">
+                                            <i class="fas fa-layer-group"></i>
+                                            <div class="solution-card-content">
+                                                <strong>High-Volume Recruiting</strong>
+                                                <span>Hire at scale with automation</span>
+                                            </div>
+                                        </a>
+                                        <a href="find-job.html" class="solution-card">
+                                            <i class="fas fa-magnifying-glass"></i>
+                                            <div class="solution-card-content">
+                                                <strong>Find Job Applicants</strong>
+                                                <span>Boost sourcing across channels</span>
+                                            </div>
+                                        </a>
+                                        <a href="improve-emp.html" class="solution-card">
+                                            <i class="fas fa-award"></i>
+                                            <div class="solution-card-content">
+                                                <strong>Improve Employer Branding</strong>
+                                                <span>Showcase culture and careers</span>
+                                            </div>
+                                        </a>
+                                        <a href="enhance-candidate-xp.html" class="solution-card">
+                                            <i class="fas fa-face-smile"></i>
+                                            <div class="solution-card-content">
+                                                <strong>Enhance Candidate Experience</strong>
+                                                <span>Fast, friendly, transparent</span>
+                                            </div>
+                                        </a>
+                                        <a href="boost-recruitment.html" class="solution-card">
+                                            <i class="fas fa-bolt"></i>
+                                            <div class="solution-card-content">
+                                                <strong>Boost Recruitment Efficiency</strong>
+                                                <span>Shorten time-to-hire</span>
+                                            </div>
+                                        </a>
+                                        <a href="leverage-ai.html" class="solution-card">
+                                            <i class="fas fa-brain"></i>
+                                            <div class="solution-card-content">
+                                                <strong>Leverage AI</strong>
+                                                <span>Automate and elevate decisions</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </li>
-                            <li role="none">
-                                <a href="executive-search.html" role="menuitem">
-                                    <i class="fas fa-crown" aria-hidden="true"></i>
-                                    <div class="dropdown-item-content">
-                                        <strong>Executive Search</strong>
-                                        <span>Elite talent acquisition for C-level positions</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li role="none">
-                                <a href="recruitment-agencies.html" role="menuitem">
-                                    <i class="fas fa-users-cog" aria-hidden="true"></i>
-                                    <div class="dropdown-item-content">
-                                        <strong>Recruitment Agencies</strong>
-                                        <span>Scale your recruitment agency operations</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                                </div>
+                            </div>
+                        </div>
                     </li>
+
+                   <li role="none"><a href="ai-page.html" class="ai-nav" role="menuitem">AI</a></li>
+                    <li role="none"><a href="integration.html" role="menuitem">Integrations</a></li>
+                    <!-- <li role="none"><a href="blog.html" role="menuitem">Resources</a></li> -->
                     <li role="none">
                         <a href="pricing.html" role="menuitem">Pricing</a>
                     </li>
+                    <li role="none">
+                        <a href="contact.html" role="menuitem">Contact</a>
+                    </li>
+                    <li role="none"><a href="faq.html" role="menuitem">FAQ</a></li>
                 </ul>
             </nav>
             <div class="header-ctas">
-                <a href="signin.html" class="btn btn-link">Sign in</a>
-                <a href="#" class="btn btn-outline">Book a demo</a>
-                <a href="#" class="btn btn-primary">Start free trial</a>
+                <a href="bookdemo.html" class="btn btn-outline">Book a demo</a>
+                <a href="signin.html" class="btn btn-primary">Start free trial</a>
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
                 <span aria-hidden="true"></span>
@@ -190,499 +228,246 @@
         </div>
     </header>
 
-    <main role="main">
-        <section class="integration-hero" aria-labelledby="integration-title" style="padding:120px 0;background:linear-gradient(135deg,#ede9fe 0%,#ddd6fe 100%);">
+    <main>
+        <section class="hero inner-hero integration-hero">
             <div class="container">
-                <div class="hero-content" style="text-align:center;max-width:900px;margin:0 auto;">
-                    <div style="display:inline-block;padding:8px 16px;background:rgba(109,40,217,0.1);border-radius:20px;margin-bottom:24px;">
-                        <span style="color:#6d28d9;font-weight:600;font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;">🔗 INTEGRATIONS & CONNECTIONS</span>
+                <div class="hero-content">
+                    <span class="hero-eyebrow integration"><i class="fas fa-plug" aria-hidden="true"></i> Integrations &amp; Automations</span>
+                    <h1>Connect TalentPrism to Your Hiring Stack</h1>
+                    <p>Unify every hiring touchpoint by linking Google Workspace, Microsoft 365, job boards, and HR systems into one collaborative platform inspired by Manatal’s open ecosystem.</p>
+                    <div class="hero-ctas">
+                        <a href="signin.html" class="btn btn-primary">Start Free Trial</a>
+                        <a href="#integration-library" class="btn btn-outline">Explore Integrations</a>
                     </div>
-                    <h1 id="integration-title" style="font-size:4rem;font-weight:700;line-height:1.1;margin-bottom:28px;color:#1a1a1a;">Connect Everything You Need</h1>
-                    <p style="font-size:1.3rem;color:#6c757d;margin-bottom:50px;line-height:1.6;">Seamlessly integrate TalentPrism with your favorite tools and platforms. Build a unified recruitment ecosystem that works for you.</p>
-                    <div class="integration-stats" style="display:flex;gap:60px;justify-content:center;flex-wrap:wrap;margin-top:60px;">
-                        <div class="stat" style="text-align:center;">
-                            <strong style="display:block;font-size:3rem;font-weight:700;color:#6d28d9;margin-bottom:8px;">2,500+</strong>
-                            <span style="color:#6c757d;font-size:1rem;font-weight:500;">Job Board Integrations</span>
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <strong>2,500+</strong>
+                            <span>Job boards and sourcing channels</span>
                         </div>
-                        <div class="stat" style="text-align:center;">
-                            <strong style="display:block;font-size:3rem;font-weight:700;color:#6d28d9;margin-bottom:8px;">50+</strong>
-                            <span style="color:#6c757d;font-size:1rem;font-weight:500;">Platform Connections</span>
+                        <div class="stat-card">
+                            <strong>70+</strong>
+                            <span>ATS &amp; HRIS partners</span>
                         </div>
-                        <div class="stat" style="text-align:center;">
-                            <strong style="display:block;font-size:3rem;font-weight:700;color:#6d28d9;margin-bottom:8px;">99.9%</strong>
-                            <span style="color:#6c757d;font-size:1rem;font-weight:500;">Uptime Reliability</span>
+                        <div class="stat-card">
+                            <strong>15 min</strong>
+                            <span>Average activation time</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img src="../img/int.png" alt="TalentPrism integration dashboard" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section id="integration-library" class="inner-section">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow"><i class="fas fa-network-wired" aria-hidden="true"></i> INTEGRATION LIBRARY</span>
+                    <h2>Build a Unified Recruitment Ecosystem</h2>
+                    <p>Modeled after Manatal’s extensive marketplace, TalentPrism connects sourcing, collaboration, and analytics tools so teams never juggle disjointed workflows.</p>
+                </div>
+                <div class="card-grid">
+                    <div class="info-card integration-card">
+                        <span class="icon-badge"><i class="fas fa-globe" aria-hidden="true"></i></span>
+                        <h3>Job Boards &amp; Marketplaces</h3>
+                        <p>Publish openings to 2,500+ global, local, and niche platforms in a single submission.</p>
+                        <ul class="check-list">
+                            <li>Smart targeting modeled after Manatal’s job board distribution.</li>
+                            <li>Performance dashboards benchmark spend and conversions.</li>
+                        </ul>
+                    </div>
+                    <div class="info-card integration-card">
+                        <span class="icon-badge"><i class="fas fa-layer-group" aria-hidden="true"></i></span>
+                        <h3>HRMS Systems</h3>
+                        <p>Keep candidate records synchronized with Workday, Greenhouse, Lever, and more.</p>
+                        <ul class="check-list">
+                            <li>Two-way updates for stages, interviews, and hiring approvals.</li>
+                            <li>Field mapping preserves compliance-ready audit trails.</li>
+                        </ul>
+                    </div>
+                    <div class="info-card integration-card">
+                        <span class="icon-badge"><i class="fas fa-user-check" aria-hidden="true"></i></span>
+                        <h3>Talent Pools</h3>
+                        <p>Enrich every candidate profile with AI insights, tags, and notes from connected tools.</p>
+                        <ul class="check-list">
+                            <li>Aggregate sourcing channels into one searchable talent cloud.</li>
+                            <li>Log outreach history automatically for full context.</li>
+                        </ul>
+                    </div>
+                    <div class="info-card integration-card">
+                        <span class="icon-badge"><i class="fas fa-comments" aria-hidden="true"></i></span>
+                        <h3>Collaboration &amp; Communication</h3>
+                        <p>Alert stakeholders inside Slack, Teams, Zoom, and email without leaving TalentPrism.</p>
+                        <ul class="check-list">
+                            <li>Automated notifications keep hiring managers aligned.</li>
+                            <li>Shared interview kits sync to every conversation.</li>
+                        </ul>
+                    </div>
+                    <div class="info-card integration-card">
+                        <span class="icon-badge"><i class="fas fa-calendar-check" aria-hidden="true"></i></span>
+                        <h3>Scheduling &amp; Productivity</h3>
+                        <p>Automate calendars, documents, and approvals with Google and Microsoft suites.</p>
+                        <ul class="check-list">
+                            <li>Book interviews instantly through Google Calendar or Outlook.</li>
+                            <li>Generate offers with Drive and SharePoint templates.</li>
+                        </ul>
+                    </div>
+                    <div class="info-card integration-card">
+                        <span class="icon-badge"><i class="fas fa-code" aria-hidden="true"></i></span>
+                        <h3>Developer &amp; Automation</h3>
+                        <p>Extend the platform with REST APIs, webhooks, and Zapier-powered automations.</p>
+                        <ul class="check-list">
+                            <li>Trigger workflows when candidates change stage or status.</li>
+                            <li>Feed data into BI tools using secure API keys.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-detailed integration-highlights">
+            <div class="feature-detail">
+                <div class="feature-media">
+                    <img src="../img/int1.png" alt="Job board distribution" loading="lazy">
+                </div>
+                <div class="feature-content">
+                    <h2>Distribute Roles and Measure Sourcing ROI</h2>
+                    <p>Broadcast openings across the same premium job board network highlighted by Manatal while tracking spend, clicks, and qualified applicants in one analytics layer.</p>
+                    <ul class="check-list">
+                        <li>Push roles to LinkedIn, Indeed, and niche boards with one approval flow.</li>
+                        <li>Compare paid and organic results to optimize every campaign.</li>
+                    </ul>
+                    <a href="bookdemo.html" class="btn btn-primary">See Distribution in Action</a>
+                </div>
+            </div>
+            <div class="feature-detail reverse">
+                <div class="feature-media">
+                    <img src="../img/int2.png" alt="Unified candidate pipeline" loading="lazy">
+                </div>
+                <div class="feature-content">
+                    <h2>Keep Your Pipeline Synced Across Systems</h2>
+                    <p>Mirror candidate updates between ATS, CRM, and HRIS tools so stakeholders always rely on a single source of truth for interviews, scorecards, and offers.</p>
+                    <ul class="check-list">
+                        <li>Automate stage changes, interview notes, and attachments.</li>
+                        <li>Respect regional privacy policies with granular access controls.</li>
+                    </ul>
+                    <a href="signin.html" class="btn btn-outline">Connect My Stack</a>
+                </div>
+            </div>
+            <div class="feature-detail">
+                <div class="feature-media">
+                    <img src="../img/int3.png" alt="Recruitment automation" loading="lazy">
+                </div>
+                <div class="feature-content">
+                    <h2>Automate Every Candidate Touchpoint</h2>
+                    <p>Launch nurture sequences, background checks, or reporting workflows the moment activity happens—no manual follow-up required.</p>
+                    <ul class="check-list">
+                        <li>Trigger messages through Gmail, Outlook, or SMS when pipelines change.</li>
+                        <li>Leverage Zapier, webhooks, or SDKs for bespoke processes.</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Talk to an Expert</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="inner-section alt">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow"><i class="fas fa-handshake" aria-hidden="true"></i> STRATEGIC PARTNERS</span>
+                    <h2>Built for Google Workspace and Microsoft 365</h2>
+                    <p>Give recruiters the same seamless experience Manatal delivers by embedding workflows inside the productivity suites they already trust.</p>
+                </div>
+                <div class="platform-grid">
+                    <div class="info-card platform-card">
+                        <div class="platform-header">
+                            <div class="platform-logo-group">
+                                <img src="../images/gsuite.svg" alt="Google Workspace">
+                            </div>
+                            <div>
+                                <h3>Google Workspace</h3>
+                                <span class="platform-subtitle">Certified Partner</span>
+                            </div>
+                        </div>
+                        <p>Stay in Gmail and Google Calendar while every interaction syncs back to TalentPrism automatically.</p>
+                        <ul class="check-list">
+                            <li>Two-way Gmail logging keeps candidate conversations contextual.</li>
+                            <li>Smart scheduling with Google Calendar and Meet.</li>
+                            <li>Drive templates trigger offer and onboarding workflows.</li>
+                        </ul>
+                        <div class="integration-badges">
+                            <span><i class="fas fa-envelope-open-text" aria-hidden="true"></i> Gmail</span>
+                            <span><i class="fas fa-calendar-check" aria-hidden="true"></i> Calendar</span>
+                            <span><i class="fas fa-video" aria-hidden="true"></i> Meet</span>
+                        </div>
+                    </div>
+                    <div class="info-card platform-card">
+                        <div class="platform-header">
+                            <div class="platform-logo-group">
+                                <img src="../images/outlook.svg" alt="Microsoft Outlook">
+                                <img src="../images/msteams.svg" alt="Microsoft Teams">
+                            </div>
+                            <div>
+                                <h3>Microsoft 365</h3>
+                                <span class="platform-subtitle">Productivity Suite</span>
+                            </div>
+                        </div>
+                        <p>Collaborate through Outlook, Teams, and SharePoint while TalentPrism tracks every stage of the hiring journey.</p>
+                        <ul class="check-list">
+                            <li>Outlook sync captures emails, attachments, and follow-ups.</li>
+                            <li>Teams notifications keep interview panels aligned.</li>
+                            <li>SharePoint and OneDrive manage compliant document storage.</li>
+                        </ul>
+                        <div class="integration-badges">
+                            <span><i class="fas fa-at" aria-hidden="true"></i> Outlook</span>
+                            <span><i class="fas fa-comments" aria-hidden="true"></i> Teams</span>
+                            <span><i class="fas fa-folder-open" aria-hidden="true"></i> SharePoint</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="integration-categories" aria-labelledby="categories-title" style="padding:100px 0;background:#fff;">
+        <section class="inner-section">
             <div class="container">
-                <div style="text-align:center;margin-bottom:70px;">
-                    <div style="display:inline-block;padding:8px 16px;background:rgba(109,40,217,0.1);border-radius:20px;margin-bottom:16px;">
-                        <span style="color:#6d28d9;font-weight:600;font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;">INTEGRATION CATEGORIES</span>
-                    </div>
-                    <h2 style="font-size:3rem;font-weight:700;margin-bottom:20px;color:#1a1a1a;">All Your Tools in One Place</h2>
-                    <p style="font-size:1.2rem;color:#6c757d;max-width:700px;margin:0 auto;">From job boards to productivity tools, connect everything your team needs to work efficiently.</p>
+                <div class="section-heading">
+                    <span class="eyebrow"><i class="fas fa-wave-square" aria-hidden="true"></i> WORKFLOWS</span>
+                    <h2>Automations That Keep Hiring Moving</h2>
+                    <p>Combine integrations to create end-to-end experiences—from sourcing and screening to onboarding and analysis.</p>
                 </div>
-                <nav class="integration-nav-grid" aria-label="Integration categories" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;">
-                    <a href="#job-boards" class="integration-nav-card" style="padding:40px;border:2px solid #f3f4f6;border-radius:16px;text-align:center;background:#fff;transition:all 0.3s ease;text-decoration:none;display:block;">
-                        <div style="width:80px;height:80px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
-                            <i class="fas fa-globe" aria-hidden="true" style="color:#fff;font-size:2rem;"></i>
-                        </div>
-                        <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:12px;color:#1a1a1a;">Job Boards</h3>
-                        <p style="color:#6c757d;line-height:1.6;margin:0;">Post jobs across 2,500+ platforms automatically</p>
-                    </a>
-                    <a href="#ats-systems" class="integration-nav-card" style="padding:40px;border:2px solid #f3f4f6;border-radius:16px;text-align:center;background:#fff;transition:all 0.3s ease;text-decoration:none;display:block;">
-                        <div style="width:80px;height:80px;background:linear-gradient(135deg,#f093fb 0%,#f5576c 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
-                            <i class="fas fa-users-cog" aria-hidden="true" style="color:#fff;font-size:2rem;"></i>
-                        </div>
-                        <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:12px;color:#1a1a1a;">ATS Systems</h3>
-                        <p style="color:#6c757d;line-height:1.6;margin:0;">Connect with leading applicant tracking systems</p>
-                    </a>
-                    <a href="#social-media" class="integration-nav-card" style="padding:40px;border:2px solid #f3f4f6;border-radius:16px;text-align:center;background:#fff;transition:all 0.3s ease;text-decoration:none;display:block;">
-                        <div style="width:80px;height:80px;background:linear-gradient(135deg,#4facfe 0%,#00f2fe 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
-                            <i class="fas fa-share-alt" aria-hidden="true" style="color:#fff;font-size:2rem;"></i>
-                        </div>
-                        <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:12px;color:#1a1a1a;">Social Media</h3>
-                        <p style="color:#6c757d;line-height:1.6;margin:0;">Share opportunities on social platforms</p>
-                    </a>
-                    <a href="#communication" class="integration-nav-card" style="padding:40px;border:2px solid #f3f4f6;border-radius:16px;text-align:center;background:#fff;transition:all 0.3s ease;text-decoration:none;display:block;">
-                        <div style="width:80px;height:80px;background:linear-gradient(135deg,#fa709a 0%,#fee140 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
-                            <i class="fas fa-comments" aria-hidden="true" style="color:#fff;font-size:2rem;"></i>
-                        </div>
-                        <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:12px;color:#1a1a1a;">Communication</h3>
-                        <p style="color:#6c757d;line-height:1.6;margin:0;">Email, chat, and collaboration tools</p>
-                    </a>
-                    <a href="#productivity" class="integration-nav-card" style="padding:40px;border:2px solid #f3f4f6;border-radius:16px;text-align:center;background:#fff;transition:all 0.3s ease;text-decoration:none;display:block;">
-                        <div style="width:80px;height:80px;background:linear-gradient(135deg,#43e97b 0%,#38f9d7 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
-                            <i class="fas fa-calendar-alt" aria-hidden="true" style="color:#fff;font-size:2rem;"></i>
-                        </div>
-                        <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:12px;color:#1a1a1a;">Productivity</h3>
-                        <p style="color:#6c757d;line-height:1.6;margin:0;">Calendar, documents, and workflow tools</p>
-                    </a>
-                    <a href="#api-developer" class="integration-nav-card" style="padding:40px;border:2px solid #f3f4f6;border-radius:16px;text-align:center;background:#fff;transition:all 0.3s ease;text-decoration:none;display:block;">
-                        <div style="width:80px;height:80px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
-                            <i class="fas fa-code" aria-hidden="true" style="color:#fff;font-size:2rem;"></i>
-                        </div>
-                        <h3 style="font-size:1.4rem;font-weight:600;margin-bottom:12px;color:#1a1a1a;">API & Developer</h3>
-                        <p style="color:#6c757d;line-height:1.6;margin:0;">Custom integrations and API access</p>
-                    </a>
-                </nav>
-            </div>
-        </section>
-
-        <!-- Search and Filter Section -->
-        <section class="integration-search" style="padding:60px 0;background:#f8f9fa;">
-            <div class="container">
-                <div class="search-container" style="max-width:800px;margin:0 auto;text-align:center;">
-                    <h2 style="font-size:2rem;font-weight:600;margin-bottom:30px;">Find Your Perfect Integration</h2>
-                    <div class="search-bar" style="position:relative;margin-bottom:30px;">
-                        <input type="text" placeholder="Search integrations..." style="width:100%;padding:15px 50px 15px 20px;border:2px solid #e9ecef;border-radius:25px;font-size:1rem;outline:none;" id="integration-search">
-                        <button style="position:absolute;right:15px;top:50%;transform:translateY(-50%);background:none;border:none;color:#6c757d;font-size:1.2rem;"><i class="fas fa-search"></i></button>
+                <div class="card-grid">
+                    <div class="info-card integration-card">
+                        <span class="icon-badge"><i class="fas fa-user-clock" aria-hidden="true"></i></span>
+                        <h3>Candidate Engagement</h3>
+                        <p>Deliver timely updates and reminders while your team focuses on conversations that matter.</p>
+                        <ul class="check-list">
+                            <li>Automatically nurture leads when they join a talent pool.</li>
+                            <li>Send interview prep across email, Slack, or Teams.</li>
+                        </ul>
                     </div>
-                    <div class="filter-buttons" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;">
-                        <button class="filter-btn active" data-filter="all" style="padding:8px 16px;border:1px solid #007bff;border-radius:20px;background:#007bff;color:#fff;font-size:0.9rem;cursor:pointer;">All</button>
-                        <button class="filter-btn" data-filter="job-boards" style="padding:8px 16px;border:1px solid #e9ecef;border-radius:20px;background:#fff;color:#6c757d;font-size:0.9rem;cursor:pointer;">Job Boards</button>
-                        <button class="filter-btn" data-filter="ats-systems" style="padding:8px 16px;border:1px solid #e9ecef;border-radius:20px;background:#fff;color:#6c757d;font-size:0.9rem;cursor:pointer;">ATS Systems</button>
-                        <button class="filter-btn" data-filter="social-media" style="padding:8px 16px;border:1px solid #e9ecef;border-radius:20px;background:#fff;color:#6c757d;font-size:0.9rem;cursor:pointer;">Social Media</button>
-                        <button class="filter-btn" data-filter="communication" style="padding:8px 16px;border:1px solid #e9ecef;border-radius:20px;background:#fff;color:#6c757d;font-size:0.9rem;cursor:pointer;">Communication</button>
-                        <button class="filter-btn" data-filter="productivity" style="padding:8px 16px;border:1px solid #e9ecef;border-radius:20px;background:#fff;color:#6c757d;font-size:0.9rem;cursor:pointer;">Productivity</button>
-                        <button class="filter-btn" data-filter="api-developer" style="padding:8px 16px;border:1px solid #e9ecef;border-radius:20px;background:#fff;color:#6c757d;font-size:0.9rem;cursor:pointer;">API & Developer</button>
+                    <div class="info-card integration-card">
+                        <span class="icon-badge"><i class="fas fa-clipboard-check" aria-hidden="true"></i></span>
+                        <h3>Approvals &amp; Compliance</h3>
+                        <p>Route offers, requisitions, and background checks through the right stakeholders instantly.</p>
+                        <ul class="check-list">
+                            <li>Trigger approvals in Google Chat or Microsoft Teams.</li>
+                            <li>Maintain SOC 2-ready audit logs with zero manual work.</li>
+                        </ul>
+                    </div>
+                    <div class="info-card integration-card">
+                        <span class="icon-badge"><i class="fas fa-chart-line" aria-hidden="true"></i></span>
+                        <h3>Analytics &amp; Reporting</h3>
+                        <p>Feed dashboards with real-time data to guide hiring strategy and stakeholder updates.</p>
+                        <ul class="check-list">
+                            <li>Sync metrics into BI tools or shared Google Sheets.</li>
+                            <li>Schedule executive summaries powered by live data.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="job-boards" class="integration-section" aria-labelledby="job-boards-title">
-            <div class="container">
-                <header class="section-header">
-                    <h2 id="job-boards-title">Job Board Integrations</h2>
-                    <p>Reach millions of candidates by posting jobs across 2,500+ job boards, from global platforms to niche industry sites.</p>
-                </header>
-                <div class="integration-showcase">
-                    <div class="integration-feature">
-                        <div class="feature-content">
-                            <h3><i class="fas fa-rocket" aria-hidden="true"></i> Automated Multi-Platform Posting</h3>
-                            <p>Post your job openings to thousands of job boards simultaneously. From premium platforms like LinkedIn and Indeed to specialized industry sites, reach the right candidates wherever they search.</p>
-                            <ul>
-                                <li><strong>2,500+ Platforms:</strong> Global, local, and specialized job boards</li>
-                                <li><strong>Smart Targeting:</strong> Post to relevant platforms based on job requirements</li>
-                                <li><strong>Campaign Management:</strong> Track performance and optimize spending</li>
-                            </ul>
-                        </div>
-                        <div class="feature-visual">
-                            <img src="../images/job-boards.svg" alt="Job board integrations illustration" loading="lazy">
-                        </div>
-                    </div>
-                </div>
-                <div class="integration-grid">
-                    <div class="integration-item">
-                        <img src="../images/linkedin.svg" alt="LinkedIn" loading="lazy">
-                        <h4>LinkedIn</h4>
-                        <p>Premium job posting and targeted advertising</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/indeed.svg" alt="Indeed" loading="lazy">
-                        <h4>Indeed</h4>
-                        <p>Largest job search engine worldwide</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/monster.svg" alt="Monster" loading="lazy">
-                        <h4>Monster</h4>
-                        <p>Global job board with extensive reach</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/glassdoor.svg" alt="Glassdoor" loading="lazy">
-                        <h4>Glassdoor</h4>
-                        <p>Company reviews and job postings</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/careerbuilder.svg" alt="CareerBuilder" loading="lazy">
-                        <h4>CareerBuilder</h4>
-                        <p>Professional job board network</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/snagajob.svg" alt="Snagajob" loading="lazy">
-                        <h4>Snagajob</h4>
-                        <p>Hourly and entry-level positions</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="ats-systems" class="integration-section" aria-labelledby="ats-title">
-            <div class="container">
-                <header class="section-header">
-                    <h2 id="ats-title">Applicant Tracking System Integrations</h2>
-                    <p>Connect TalentPrism with popular ATS platforms to create a unified recruitment ecosystem.</p>
-                </header>
-                <div class="integration-showcase">
-                    <div class="integration-feature reverse">
-                        <div class="feature-content">
-                            <h3><i class="fas fa-sync" aria-hidden="true"></i> Seamless Data Synchronization</h3>
-                            <p>Automatically sync candidate data, applications, and hiring progress between TalentPrism and your existing ATS. Eliminate manual data entry and maintain data consistency across platforms.</p>
-                            <ul>
-                                <li><strong>Real-time Sync:</strong> Instant updates across all connected systems</li>
-                                <li><strong>Data Mapping:</strong> Custom field mapping for seamless integration</li>
-                                <li><strong>Two-way Sync:</strong> Changes in either system reflect everywhere</li>
-                            </ul>
-                        </div>
-                        <div class="feature-visual">
-                            <img src="../images/ats-sync.svg" alt="ATS synchronization illustration" loading="lazy">
-                        </div>
-                    </div>
-                </div>
-                <div class="integration-grid">
-                    <div class="integration-item">
-                        <img src="../images/workday.svg" alt="Workday" loading="lazy">
-                        <h4>Workday</h4>
-                        <p>Enterprise HR and talent management</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/greenhouse.svg" alt="Greenhouse" loading="lazy">
-                        <h4>Greenhouse</h4>
-                        <p>Modern ATS for growing companies</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/lever.svg" alt="Lever" loading="lazy">
-                        <h4>Lever</h4>
-                        <p>Candidate experience focused ATS</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/bamboohr.svg" alt="BambooHR" loading="lazy">
-                        <h4>BambooHR</h4>
-                        <p>Simple and intuitive HR software</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/jobvite.svg" alt="Jobvite" loading="lazy">
-                        <h4>Jobvite</h4>
-                        <p>Social recruiting and ATS platform</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/taleo.svg" alt="Taleo" loading="lazy">
-                        <h4>Taleo</h4>
-                        <p>Oracle's talent management suite</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="social-media" class="integration-section" aria-labelledby="social-title">
-            <div class="container">
-                <header class="section-header">
-                    <h2 id="social-title">Social Media Integrations</h2>
-                    <p>Leverage social platforms to expand your reach and engage with passive candidates.</p>
-                </header>
-                <div class="integration-showcase">
-                    <div class="integration-feature">
-                        <div class="feature-content">
-                            <h3><i class="fas fa-share-alt" aria-hidden="true"></i> Social Recruitment Automation</h3>
-                            <p>Automatically share job postings across social media platforms and track engagement. Connect with candidates where they spend their time online.</p>
-                            <ul>
-                                <li><strong>Auto-Posting:</strong> Schedule and publish jobs across multiple platforms</li>
-                                <li><strong>Engagement Tracking:</strong> Monitor clicks, shares, and applications</li>
-                                <li><strong>Social Sourcing:</strong> Import profiles and connections from social networks</li>
-                            </ul>
-                        </div>
-                        <div class="feature-visual">
-                            <img src="../images/social-integration.svg" alt="Social media integration illustration" loading="lazy">
-                        </div>
-                    </div>
-                </div>
-                <div class="integration-grid">
-                    <div class="integration-item">
-                        <img src="../images/linkedin-icon.svg" alt="LinkedIn" loading="lazy">
-                        <h4>LinkedIn</h4>
-                        <p>Professional networking and job posting</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/facebook-icon.svg" alt="Facebook" loading="lazy">
-                        <h4>Facebook</h4>
-                        <p>Social advertising and community groups</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/twitter-icon.svg" alt="Twitter" loading="lazy">
-                        <h4>Twitter</h4>
-                        <p>Real-time updates and networking</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/instagram.svg" alt="Instagram" loading="lazy">
-                        <h4>Instagram</h4>
-                        <p>Visual storytelling and employer branding</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/tiktok.svg" alt="TikTok" loading="lazy">
-                        <h4>TikTok</h4>
-                        <p>Creative content and Gen Z outreach</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/youtube.svg" alt="YouTube" loading="lazy">
-                        <h4>YouTube</h4>
-                        <p>Video content and employer branding</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="communication" class="integration-section" aria-labelledby="comm-title">
-            <div class="container">
-                <header class="section-header">
-                    <h2 id="comm-title">Communication & Collaboration Tools</h2>
-                    <p>Keep your team connected and candidates engaged with integrated communication platforms.</p>
-                </header>
-                <div class="integration-showcase">
-                    <div class="integration-feature reverse">
-                        <div class="feature-content">
-                            <h3><i class="fas fa-comments" aria-hidden="true"></i> Unified Communication Hub</h3>
-                            <p>Centralize all recruitment communications in one place. Send emails, schedule interviews, and collaborate with your team using your preferred communication tools.</p>
-                            <ul>
-                                <li><strong>Email Integration:</strong> Connect with Gmail, Outlook, and other email providers</li>
-                                <li><strong>Video Interviewing:</strong> Schedule and conduct interviews via Zoom, Teams</li>
-                                <li><strong>Team Collaboration:</strong> Share updates and coordinate hiring activities</li>
-                            </ul>
-                        </div>
-                        <div class="feature-visual">
-                            <img src="../images/communication.svg" alt="Communication integration illustration" loading="lazy">
-                        </div>
-                    </div>
-                </div>
-                <div class="integration-grid">
-                    <div class="integration-item">
-                        <img src="../images/gmail.svg" alt="Gmail" loading="lazy">
-                        <h4>Gmail</h4>
-                        <p>Email integration and contact sync</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/outlook.svg" alt="Outlook" loading="lazy">
-                        <h4>Outlook</h4>
-                        <p>Calendar and email synchronization</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/zoom.svg" alt="Zoom" loading="lazy">
-                        <h4>Zoom</h4>
-                        <p>Video interviewing and meetings</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/msteams.svg" alt="Microsoft Teams" loading="lazy">
-                        <h4>Teams</h4>
-                        <p>Team collaboration and video calls</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/slack.svg" alt="Slack" loading="lazy">
-                        <h4>Slack</h4>
-                        <p>Team messaging and notifications</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/twilio.svg" alt="Twilio" loading="lazy">
-                        <h4>Twilio</h4>
-                        <p>SMS and communication APIs</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="productivity" class="integration-section" aria-labelledby="productivity-title">
-            <div class="container">
-                <header class="section-header">
-                    <h2 id="productivity-title">Productivity & Workflow Tools</h2>
-                    <p>Streamline your recruitment processes with calendar, document, and project management integrations.</p>
-                </header>
-                <div class="integration-showcase">
-                    <div class="integration-feature">
-                        <div class="feature-content">
-                            <h3><i class="fas fa-calendar-alt" aria-hidden="true"></i> Smart Workflow Automation</h3>
-                            <p>Automate repetitive tasks and create efficient workflows that connect your recruitment process with productivity tools. From interview scheduling to offer letter generation.</p>
-                            <ul>
-                                <li><strong>Calendar Integration:</strong> Automatic interview scheduling and reminders</li>
-                                <li><strong>Document Automation:</strong> Generate offers and contracts from templates</li>
-                                <li><strong>Task Management:</strong> Track hiring progress and team assignments</li>
-                            </ul>
-                        </div>
-                        <div class="feature-visual">
-                            <img src="../images/productivity.svg" alt="Productivity integration illustration" loading="lazy">
-                        </div>
-                    </div>
-                </div>
-                <div class="integration-grid">
-                    <div class="integration-item">
-                        <img src="../images/google-calendar.svg" alt="Google Calendar" loading="lazy">
-                        <h4>Google Calendar</h4>
-                        <p>Interview scheduling and time management</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/googledocs.svg" alt="Google Docs" loading="lazy">
-                        <h4>Google Docs</h4>
-                        <p>Document collaboration and templates</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/zapier.svg" alt="Zapier" loading="lazy">
-                        <h4>Zapier</h4>
-                        <p>Workflow automation and connections</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/trello.svg" alt="Trello" loading="lazy">
-                        <h4>Trello</h4>
-                        <p>Project management and task tracking</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/asana.svg" alt="Asana" loading="lazy">
-                        <h4>Asana</h4>
-                        <p>Team collaboration and project tracking</p>
-                    </div>
-                    <div class="integration-item">
-                        <img src="../images/dropbox.svg" alt="Dropbox" loading="lazy">
-                        <h4>Dropbox</h4>
-                        <p>File storage and document sharing</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="api-developer" class="integration-section" aria-labelledby="api-title">
-            <div class="container">
-                <header class="section-header">
-                    <h2 id="api-title">API & Developer Tools</h2>
-                    <p>Build custom integrations and extend TalentPrism's capabilities with our comprehensive API.</p>
-                </header>
-                <div class="integration-showcase">
-                    <div class="integration-feature reverse">
-                        <div class="feature-content">
-                            <h3><i class="fas fa-code" aria-hidden="true"></i> Powerful REST API</h3>
-                            <p>Access TalentPrism's full functionality through our REST API. Build custom integrations, automate workflows, and connect with any system that supports webhooks.</p>
-                            <ul>
-                                <li><strong>RESTful API:</strong> Complete access to all TalentPrism features</li>
-                                <li><strong>Webhook Support:</strong> Real-time notifications for system events</li>
-                                <li><strong>SDK Libraries:</strong> Pre-built libraries for popular programming languages</li>
-                            </ul>
-                            <a href="#" class="btn btn-secondary">View API Documentation</a>
-                        </div>
-                        <div class="feature-visual">
-                            <img src="../images/api-integration.svg" alt="API integration illustration" loading="lazy">
-                        </div>
-                    </div>
-                </div>
-                <div class="api-resources">
-                    <div class="api-resource">
-                        <h3><i class="fas fa-book" aria-hidden="true"></i> API Reference</h3>
-                        <p>Complete documentation for all endpoints, methods, and authentication.</p>
-                        <a href="#" class="btn btn-outline">Explore API Docs</a>
-                    </div>
-                    <div class="api-resource">
-                        <h3><i class="fas fa-key" aria-hidden="true"></i> Authentication</h3>
-                        <p>Learn about OAuth, API keys, and secure authentication methods.</p>
-                        <a href="#" class="btn btn-outline">Authentication Guide</a>
-                    </div>
-                    <div class="api-resource">
-                        <h3><i class="fas fa-plug" aria-hidden="true"></i> Webhooks</h3>
-                        <p>Set up real-time notifications for candidate updates and hiring events.</p>
-                        <a href="#" class="btn btn-outline">Webhook Guide</a>
-                    </div>
-                    <div class="api-resource">
-                        <h3><i class="fas fa-flask" aria-hidden="true"></i> SDK & Libraries</h3>
-                        <p>Official SDKs for JavaScript, Python, PHP, and other languages.</p>
-                        <a href="#" class="btn btn-outline">Download SDKs</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="integration-benefits" aria-labelledby="benefits-title">
-            <div class="container">
-                <header class="section-header">
-                    <h2 id="benefits-title">Why Choose TalentPrism Integrations?</h2>
-                    <p>Our integration ecosystem is designed to make your recruitment process more efficient and connected.</p>
-                </header>
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <i class="fas fa-clock" aria-hidden="true"></i>
-                        <h3>Save Time</h3>
-                        <p>Automate repetitive tasks and eliminate manual data entry across platforms.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
-                        <h3>Secure & Reliable</h3>
-                        <p>Enterprise-grade security with 99.9% uptime and SOC 2 Type II compliance.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <i class="fas fa-cogs" aria-hidden="true"></i>
-                        <h3>Easy Setup</h3>
-                        <p>Most integrations can be configured in minutes with no coding required.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <i class="fas fa-chart-line" aria-hidden="true"></i>
-                        <h3>Data Insights</h3>
-                        <p>Get unified analytics across all your recruitment tools and platforms.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <i class="fas fa-users" aria-hidden="true"></i>
-                        <h3>Team Collaboration</h3>
-                        <p>Keep your entire recruitment team in sync across different tools.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <i class="fas fa-rocket" aria-hidden="true"></i>
-                        <h3>Scalable</h3>
-                        <p>Grow your integrations as your business expands, with custom API access.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="integration-cta" aria-labelledby="cta-title">
-            <div class="container">
-                <div class="cta-content">
-                    <h2 id="cta-title">Ready to Connect Your Recruitment Stack?</h2>
-                    <p>Join thousands of recruitment teams who have streamlined their processes with TalentPrism integrations.</p>
-                    <div class="cta-buttons">
-                        <a href="#" class="btn btn-primary btn-large">Start Free Trial</a>
-                        <a href="#" class="btn btn-outline btn-large">View All Integrations</a>
-                    </div>
-                    <p class="cta-microcopy">No credit card required • 14-day free trial • Setup in minutes</p>
-                </div>
-            </div>
-        </section>
-    </main>
+       </main>
 
     <!-- Unified FAQ section -->
     <section class="faq-section">
@@ -737,7 +522,6 @@
                         <ul>
                             <li><a href="candidate-sourcing.html"> Candidate Sourcing</a></li>
                             <li><a href="ai-candidate-enrichment.html"> AI Enrichment</a></li>
-                            <li><a href="analytics.html"> Analytics & Reports</a></li>
                             <li><a href="applicant-tracking.html"> Applicant Tracking</a></li>
                             <li><a href="ai-recommendations.html"> AI Recommendations</a></li>
                         </ul>
@@ -750,7 +534,6 @@
                             <li><a href="recruitment-crm.html"> Recruitment CRM</a></li>
                             <li><a href="collaboration.html"> Collaboration</a></li>
                             <li><a href="data-privacy.html"> Data Privacy</a></li>
-                            <li><a href="support.html"> Support</a></li>
                         </ul>
                     </div>
 
@@ -802,7 +585,7 @@
         </div>
     </footer>
 
-    <script src="../js/script.js"></script>
+    <script src="../js/script.js?v=2025-11-01"></script>
     <script src="../js/integration.js"></script>
 </body>
 </html>

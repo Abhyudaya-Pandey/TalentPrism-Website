@@ -232,6 +232,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Ensure unified FAQ exists on pages missing it
     ensureFaqSection();
 
+    // Ensure shared conversion sections exist (feature grid, testimonials, CTA)
+    ensureSharedSections();
+
     // Initialize classic FAQ (for injected or existing .faq-item)
     initClassicFAQ();
 
@@ -565,11 +568,268 @@ function ensureFaqSection() {
 }
 
 // ===============================
+// Ensure shared conversion sections exist across pages
+// ===============================
+function ensureSharedSections() {
+    const path = location.pathname.replace(/\\/g, '/');
+    if (path.includes('signin.html')) return;
+
+    const main = document.querySelector('main') || document.body;
+    if (!main) return;
+
+    const isInPages = /\/pages\//.test(path);
+    const linkPrefix = isInPages ? '' : 'pages/';
+
+    const findInsertionPoint = () => document.querySelector('.pre-footer-cta') || document.querySelector('footer') || main.lastElementChild;
+
+    if (!document.querySelector('.feature-4-wrapper')) {
+        const featureWrapper = document.createElement('div');
+        featureWrapper.className = 'feature-4-wrapper';
+        featureWrapper.innerHTML = `
+            <div class="feature-4-left">
+                <h2>Get started with TalentPrism</h2>
+                <p class="features-4-text">Our 14-day free trial allows anyone to explore the platform without commitment, while our team is committed to providing support and guidance throughout the process.</p>
+                <a href="${linkPrefix}pricing.html" class="features-learn-more-link white">
+                    <span>View All Features</span>
+                    <img src="https://cdn.prod.website-files.com/627cdcca8bc0d25e49b26705/627cdcca8bc0d2f4efb2671c_Group%2023.svg" loading="lazy" alt="" class="featured-learn-more-arrow">
+                    <div class="features-learn-more-link-line"></div>
+                </a>
+            </div>
+            <div class="pointer-grid">
+                <div class="pointer-grid-item">
+                    <img src="https://cdn.prod.website-files.com/627cdcca8bc0d25e49b26705/627cdcca8bc0d2b16eb26720_Group%2017.svg" loading="lazy" alt="" class="pointer-icon">
+                    <div>Data migration from your existing recruitment software</div>
+                </div>
+                <div class="pointer-grid-item">
+                    <img src="https://cdn.prod.website-files.com/627cdcca8bc0d25e49b26705/627cdcca8bc0d2a495b26718_Group%2013.svg" loading="lazy" alt="" class="pointer-icon">
+                    <div>Training for a fast and smooth onboarding</div>
+                </div>
+                <div class="pointer-grid-item">
+                    <img src="https://cdn.prod.website-files.com/627cdcca8bc0d25e49b26705/627cdcca8bc0d2f319b26742_Group%2018.svg" loading="lazy" alt="" class="pointer-icon">
+                    <div>Transparent and flexible pricing without lock-in contract</div>
+                </div>
+                <div class="pointer-grid-item">
+                    <img src="https://cdn.prod.website-files.com/627cdcca8bc0d25e49b26705/627cdcca8bc0d20d6db2670e_Group%2019.svg" loading="lazy" width="30" alt="" class="pointer-icon">
+                    <div>Highest security protocol as standard (SOC II Type 2)</div>
+                </div>
+                <div class="pointer-grid-item">
+                    <img src="https://cdn.prod.website-files.com/627cdcca8bc0d25e49b26705/627cdcca8bc0d24f2fb26710_Group%2021.svg" loading="lazy" alt="" class="pointer-icon">
+                    <div>24 / 5 support via live chat</div>
+                </div>
+                <div class="pointer-grid-item">
+                    <img src="https://cdn.prod.website-files.com/627cdcca8bc0d25e49b26705/627cdcca8bc0d2038fb26714_Group%2022.svg" loading="lazy" alt="" class="pointer-icon">
+                    <div>All-in-one platform covering all your recruitment needs</div>
+                </div>
+            </div>`;
+
+        const insertionTarget = document.querySelector('.testimonials-container') || document.querySelector('.pre-footer-cta') || findInsertionPoint();
+        if (insertionTarget && insertionTarget.parentNode) {
+            insertionTarget.parentNode.insertBefore(featureWrapper, insertionTarget);
+        } else {
+            main.appendChild(featureWrapper);
+        }
+    }
+
+    if (!document.querySelector('.testimonials-container')) {
+        const testimonials = document.createElement('div');
+        testimonials.className = 'testimonials-container';
+        testimonials.innerHTML = `
+            <h2>What our customers say</h2>
+            <div class="marquee-wrapper">
+                <div class="marquee">
+                    <div class="testimonial-item">
+                        <div class="testimonial-image-and-name">
+                            <div class="testimonial-image">
+                                <img src="https://cdn.prod.website-files.com/627cdcca8bc0d25e49b26705/62908f4d3ad8aefb3bc0a243_william-twining-linkedin-1.webp" loading="lazy" alt="" class="image">
+                            </div>
+                            <div class="testimonial-name-and-designation">
+                                <h5 class="heading-7">Bill Twinning</h5>
+                                <div class="_16-px">Talent Resources & Development Director - Charoen Pokphand Group</div>
+                            </div>
+                        </div>
+                        <div class="text-block-13">TalentPrism is the best ATS we worked with. Simplicity, efficiency and the latest technologies combined make it an indispensable tool for any large-scale HR team. Since its adoption, we've seen a huge increase across all our key recruitment metrics. To summarize, it is a must-have.</div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-image-and-name">
+                            <div class="testimonial-image">
+                                <img src="https://cdn.prod.website-files.com/627cdcca8bc0d25e49b26705/6290898c4fda35f97ab40206_Dina-Demajo.webp" loading="lazy" alt="" class="image">
+                            </div>
+                            <div class="testimonial-name-and-designation">
+                                <h5 class="heading-6">Dina Demajo</h5>
+                                <div class="_16-px">Senior Talent Acquisition - Manpower Group</div>
+                            </div>
+                        </div>
+                        <div class="text-block-6">Manpower has been using TalentPrism and we couldn't be happier as a team with the services this platform has provided. The application is extremely user-friendly and very well equipped with all the useful functions one would require for successful recruitment. The support team is also excellent with very fast response time.</div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-image-and-name">
+                            <div class="testimonial-image">
+                                <img src="https://cdn.prod.website-files.com/627cdcca8bc0d25e49b26705/62908f4d5332b75a567025dc_Achmad-Firdaus-linkedin1.webp" loading="lazy" alt="" class="image">
+                            </div>
+                            <div class="testimonial-name-and-designation">
+                                <h5 class="heading-7">Ahmed Firdaus</h5>
+                                <div class="_16-px">Director - MRI Network, Executive Search Firm</div>
+                            </div>
+                        </div>
+                        <div class="text-block-13">I've been using TalentPrism for the past couple of months and the platform is excellent, user-friendly and it has helped me a lot in my recruitment process, operation and database management. I'm very happy with their great support. Whenever I ask something they come back to me within minutes.</div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-image-and-name">
+                            <div class="testimonial-image">
+                                <img src="https://cdn.prod.website-files.com/627cdcca8bc0d25e49b26705/62908a81e467d8f6893c8e8f_Edmund-Yeo.webp" loading="lazy" alt="" class="image">
+                            </div>
+                            <div class="testimonial-name-and-designation">
+                                <h5>Edmund Yeo</h5>
+                                <div class="_16-px">Human Resources Manager - Oakwood</div>
+                            </div>
+                        </div>
+                        <div class="text-block-12">TalentPrism is a sophisticated, easy-to-use, mobile-friendly, and cloud-based applicant tracking system that helps companies achieve digitalization and seamless integration to LinkedIn and other job boards. The team at TalentPrism is very supportive, helpful, prompt in their replies and we were pleased to see that the support they offer exceeded our expectations.</div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-image-and-name">
+                            <div class="testimonial-image">
+                                <img src="https://cdn.prod.website-files.com/627cdcca8bc0d25e49b26705/62908f4e7cfbad6a2d295f64_Maxime-Ferreira-Photo.webp" loading="lazy" alt="" class="image">
+                            </div>
+                            <div class="testimonial-name-and-designation">
+                                <h5 class="heading-7">Maxime Ferreira</h5>
+                                <div class="_16-px">International Director - JB Hired</div>
+                            </div>
+                        </div>
+                        <div class="text-block-13">TalentPrism has been at the core of our agency's expansion. Using it has greatly improved and simplified our recruitment processes. Incredibly easy and intuitive to use, customizable to a tee, and offers top-tier live support. Our recruiters love it. A must-have for all recruitment agencies. Definitely recommend!</div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-image-and-name">
+                            <div class="testimonial-image">
+                                <img src="https://cdn.prod.website-files.com/627cdcca8bc0d25e49b26705/62c0878274a3663382491a05_testiomonial-ngoc-trinh-tran%20(1).webp" loading="lazy" alt="" class="image">
+                            </div>
+                            <div class="testimonial-name-and-designation">
+                                <h5 class="heading-8">Ngoc-Thinh Tran</h5>
+                                <div class="_16-px">HR Manager, Talent Sourcing & Acquisition - Suntory PepsiCo Beverage</div>
+                            </div>
+                        </div>
+                        <div class="text-block-14">I am using TalentPrism for talent sourcing and it is the best platform ever. I am so impressed, the TalentPrism team did an excellent job. This is so awesome I am recommending the solution to all recruiters I know.</div>
+                    </div>
+                </div>
+                <div class="marquee">
+                    <div class="testimonial-item">
+                        <div class="testimonial-image-and-name">
+                            <div class="testimonial-image">
+                                <img src="https://cdn.prod.website-files.com/627cdcca8bc0d25e49b26705/62908f4d3ad8aefb3bc0a243_william-twining-linkedin-1.webp" loading="lazy" alt="" class="image">
+                            </div>
+                            <div class="testimonial-name-and-designation">
+                                <h5 class="heading-7">Bill Twinning</h5>
+                                <div class="_16-px">Talent Resources & Development Director - Charoen Pokphand Group</div>
+                            </div>
+                        </div>
+                        <div class="text-block-13">TalentPrism is the best ATS we worked with. Simplicity, efficiency and the latest technologies combined make it an indispensable tool for any large-scale HR team. Since its adoption, we've seen a huge increase across all our key recruitment metrics. To summarize, it is a must-have.</div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-image-and-name">
+                            <div class="testimonial-image">
+                                <img src="https://cdn.prod.website-files.com/627cdcca8bc0d25e49b26705/6290898c4fda35f97ab40206_Dina-Demajo.webp" loading="lazy" alt="" class="image">
+                            </div>
+                            <div class="testimonial-name-and-designation">
+                                <h5 class="heading-6">Dina Demajo</h5>
+                                <div class="_16-px">Senior Talent Acquisition - Manpower Group</div>
+                            </div>
+                        </div>
+                        <div class="text-block-6">Manpower has been using TalentPrism and we couldn't be happier as a team with the services this platform has provided. The application is extremely user-friendly and very well equipped with all the useful functions one would require for successful recruitment. The support team is also excellent with very fast response time.</div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-image-and-name">
+                            <div class="testimonial-image">
+                                <img src="https://cdn.prod.website-files.com/627cdcca8bc0d25e49b26705/62908f4d5332b75a567025dc_Achmad-Firdaus-linkedin1.webp" loading="lazy" alt="" class="image">
+                            </div>
+                            <div class="testimonial-name-and-designation">
+                                <h5 class="heading-7">Ahmed Firdaus</h5>
+                                <div class="_16-px">Director - MRI Network, Executive Search Firm</div>
+                            </div>
+                        </div>
+                        <div class="text-block-13">I've been using TalentPrism for the past couple of months and the platform is excellent, user-friendly and it has helped me a lot in my recruitment process, operation and database management. I'm very happy with their great support. Whenever I ask something they come back to me within minutes.</div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-image-and-name">
+                            <div class="testimonial-image">
+                                <img src="https://cdn.prod.website-files.com/627cdcca8bc0d25e49b26705/62908a81e467d8f6893c8e8f_Edmund-Yeo.webp" loading="lazy" alt="" class="image">
+                            </div>
+                            <div class="testimonial-name-and-designation">
+                                <h5>Edmund Yeo</h5>
+                                <div class="_16-px">Human Resources Manager - Oakwood</div>
+                            </div>
+                        </div>
+                        <div class="text-block-12">TalentPrism is a sophisticated, easy-to-use, mobile-friendly, and cloud-based applicant tracking system that helps companies achieve digitalization and seamless integration to LinkedIn and other job boards. The team at TalentPrism is very supportive, helpful, prompt in their replies and we were pleased to see that the support they offer exceeded our expectations.</div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-image-and-name">
+                            <div class="testimonial-image">
+                                <img src="https://cdn.prod.website-files.com/627cdcca8bc0d25e49b26705/62908f4e7cfbad6a2d295f64_Maxime-Ferreira-Photo.webp" loading="lazy" alt="" class="image">
+                            </div>
+                            <div class="testimonial-name-and-designation">
+                                <h5 class="heading-7">Maxime Ferreira</h5>
+                                <div class="_16-px">International Director - JB Hired</div>
+                            </div>
+                        </div>
+                        <div class="text-block-13">TalentPrism has been at the core of our agency's expansion. Using it has greatly improved and simplified our recruitment processes. Incredibly easy and intuitive to use, customizable to a tee, and offers top-tier live support. Our recruiters love it. A must-have for all recruitment agencies. Definitely recommend!</div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-image-and-name">
+                            <div class="testimonial-image">
+                                <img src="https://cdn.prod.website-files.com/627cdcca8bc0d25e49b26705/62c0878274a3663382491a05_testiomonial-ngoc-trinh-tran%20(1).webp" loading="lazy" alt="" class="image">
+                            </div>
+                            <div class="testimonial-name-and-designation">
+                                <h5 class="heading-8">Ngoc-Thinh Tran</h5>
+                                <div class="_16-px">HR Manager, Talent Sourcing & Acquisition - Suntory PepsiCo Beverage</div>
+                            </div>
+                        </div>
+                        <div class="text-block-14">I am using TalentPrism for talent sourcing and it is the best platform ever. I am so impressed, the TalentPrism team did an excellent job. This is so awesome I am recommending the solution to all recruiters I know.</div>
+                    </div>
+                </div>
+            </div>`;
+
+        const testimonialsTarget = document.querySelector('.pre-footer-cta') || findInsertionPoint();
+        if (testimonialsTarget && testimonialsTarget.parentNode) {
+            testimonialsTarget.parentNode.insertBefore(testimonials, testimonialsTarget);
+        } else {
+            main.appendChild(testimonials);
+        }
+    }
+
+    if (!document.querySelector('.pre-footer-cta')) {
+        const preFooter = document.createElement('section');
+        preFooter.className = 'pre-footer-cta';
+        preFooter.innerHTML = `
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Try TalentPrism for free during 14-day with no commitment.</h2>
+                    <p>No credit card required • 2 minutes to get started</p>
+                    <div class="cta-buttons">
+                        <a href="${linkPrefix}signin.html" class="btn btn-primary btn-large">Start Free Trial</a>
+                        <a href="${linkPrefix}bookdemo.html" class="btn btn-outline btn-large">Book a Demo</a>
+                    </div>
+                </div>
+            </div>`;
+
+        const footer = document.querySelector('footer.footer');
+        if (footer && footer.parentNode) {
+            footer.parentNode.insertBefore(preFooter, footer);
+        } else {
+            main.appendChild(preFooter);
+        }
+    }
+}
+
+// ===============================
 // Header normalization to match contact page across site
 // ===============================
 function standardizeHeader() {
         const header = document.querySelector('header.header');
         if (!header) return;
+
+    // If the page already includes the new mega-menu (solutions-mega) or an AI tab, don't overwrite.
+    // This preserves hand-authored headers like on the homepage.
+    if (header.querySelector('.solutions-mega') || header.querySelector('a[href*="ai-page.html"]')) {
+        return;
+    }
 
     // Detect if current page is under a `pages` directory regardless of repo subpath or whether
     // the site root is the repo root or the `website` folder. This works for:
@@ -606,13 +866,75 @@ function standardizeHeader() {
                         </li>
                         <li class="dropdown">
                             <a href="#solutions">Solutions <span class="dropdown-arrow">▼</span></a>
-                            <ul class="dropdown-menu dropdown-menu-solutions">
-                                <li><a href="${link('freelance-recruiters.html')}"><i class="fas fa-user-tie"></i><div class="dropdown-item-content"><strong>Freelance Recruiters</strong><span>Tools for independents</span></div></a></li>
-                                <li><a href="${link('staffing-agencies.html')}"><i class="fas fa-building"></i><div class="dropdown-item-content"><strong>Staffing Agencies</strong><span>End-to-end platform</span></div></a></li>
-                                <li><a href="${link('executive-search.html')}"><i class="fas fa-crown"></i><div class="dropdown-item-content"><strong>Executive Search</strong><span>Elite talent</span></div></a></li>
-                                <li><a href="${link('recruitment-agencies.html')}"><i class="fas fa-users-cog"></i><div class="dropdown-item-content"><strong>Recruitment Agencies</strong><span>Scale operations</span></div></a></li>
+                            <ul class="dropdown-menu solutions-mega">
+                                <li class="mega-aside">
+                                    <span class="eyebrow">Solutions</span>
+                                    <h4>Use Cases</h4>
+                                    <p>Choose a workflow that fits your goals. Only green checks. No red crosses.</p>
+                                </li>
+                                <li class="mega-item">
+                                    <a href="${link('high-volume-recruiting.html')}">
+                                        <i class="fas fa-layer-group"></i>
+                                        <div class="dropdown-item-content">
+                                            <strong>High-Volume Recruiting</strong>
+                                            <span>Hire at scale with automation</span>
+                                        </div>
+                                        <span class="menu-check">✓</span>
+                                    </a>
+                                </li>
+                                <li class="mega-item">
+                                    <a href="${link('find-job.html')}">
+                                        <i class="fas fa-magnifying-glass"></i>
+                                        <div class="dropdown-item-content">
+                                            <strong>Find Job Applicants</strong>
+                                            <span>Boost sourcing across channels</span>
+                                        </div>
+                                        <span class="menu-check">✓</span>
+                                    </a>
+                                </li>
+                                <li class="mega-item">
+                                    <a href="${link('improve-emp.html')}">
+                                        <i class="fas fa-award"></i>
+                                        <div class="dropdown-item-content">
+                                            <strong>Improve Employer Branding</strong>
+                                            <span>Showcase culture and careers</span>
+                                        </div>
+                                        <span class="menu-check">✓</span>
+                                    </a>
+                                </li>
+                                <li class="mega-item">
+                                    <a href="${link('enhance-candidate-xp.html')}">
+                                        <i class="fas fa-face-smile"></i>
+                                        <div class="dropdown-item-content">
+                                            <strong>Enhance Candidate Experience</strong>
+                                            <span>Fast, friendly, transparent</span>
+                                        </div>
+                                        <span class="menu-check">✓</span>
+                                    </a>
+                                </li>
+                                <li class="mega-item">
+                                    <a href="${link('boost-recruitment.html')}">
+                                        <i class="fas fa-bolt"></i>
+                                        <div class="dropdown-item-content">
+                                            <strong>Boost Recruitment Efficiency</strong>
+                                            <span>Shorten time-to-hire</span>
+                                        </div>
+                                        <span class="menu-check">✓</span>
+                                    </a>
+                                </li>
+                                <li class="mega-item">
+                                    <a href="${link('leverage-ai.html')}">
+                                        <i class="fas fa-brain"></i>
+                                        <div class="dropdown-item-content">
+                                            <strong>Leverage AI</strong>
+                                            <span>Automate and elevate decisions</span>
+                                        </div>
+                                        <span class="menu-check">✓</span>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
+                        <li><a href="${isInPages ? 'ai-page.html' : 'pages/ai-page.html'}">AI</a></li>
                         <li><a href="${isInPages ? 'integration.html' : 'pages/integration.html'}">Integrations</a></li>
                         <li><a href="${isInPages ? 'pricing.html' : 'pages/pricing.html'}">Pricing</a></li>
                         <li><a href="${isInPages ? 'contact.html' : 'pages/contact.html'}">Contact</a></li>
@@ -740,6 +1062,36 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             scrollToDemoForm();
+        });
+    });
+});
+
+// Solutions mega menu sidebar navigation
+document.addEventListener('DOMContentLoaded', function() {
+    const solutionsNavItems = document.querySelectorAll('.solutions-nav-item');
+    const solutionsPanels = document.querySelectorAll('.solutions-panel');
+    
+    solutionsNavItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const targetId = this.getAttribute('data-target');
+            
+            // Remove active from all nav items
+            solutionsNavItems.forEach(nav => nav.classList.remove('active'));
+            
+            // Add active to clicked item
+            this.classList.add('active');
+            
+            // Hide all panels
+            solutionsPanels.forEach(panel => panel.classList.remove('active'));
+            
+            // Show target panel
+            const targetPanel = document.getElementById(targetId);
+            if (targetPanel) {
+                targetPanel.classList.add('active');
+            }
         });
     });
 });

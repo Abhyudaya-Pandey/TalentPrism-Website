@@ -1,21 +1,26 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing - TalentPrism</title>
-    <meta name="description" content="Simple, transparent pricing for TalentPrism. Choose the plan that fits your hiring needs.">
+    <meta name="description"
+        content="Simple, transparent pricing for TalentPrism. Choose the plan that fits your hiring needs.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Mona+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Mona+Sans:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css?v=2025-11-01">
 </head>
+
 <body>
-    <header class="header">
+        <header class="header">
         <div class="container">
             <div class="logo">
-                <a href="../index.html"><img src="../img/l.png" alt="TalentPrism Logo" style="width: auto; height:70px;"></a>
+                <a href="../index.html"><img src="../img/l.png" alt="TalentPrism Logo" style="width: auto;"></a>
             </div>
             <nav class="nav">
                 <ul>
@@ -37,24 +42,6 @@
                                     <div class="dropdown-item-content">
                                         <strong>AI Candidate Enrichment</strong>
                                         <span>Enhance profiles with AI insights</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="analytics.html">
-                                    <i class="fas fa-chart-bar"></i>
-                                    <div class="dropdown-item-content">
-                                        <strong>Analytics & Reports</strong>
-                                        <span>Data-driven recruitment insights</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="support.html">
-                                    <i class="fas fa-headset"></i>
-                                    <div class="dropdown-item-content">
-                                        <strong>Support & Assistance</strong>
-                                        <span>24/7 expert help and guidance</span>
                                     </div>
                                 </a>
                             </li>
@@ -125,55 +112,110 @@
                     </li>
                     <li class="dropdown">
                         <a href="#solutions">Solutions <span class="dropdown-arrow">▼</span></a>
-                        <ul class="dropdown-menu dropdown-menu-solutions">
-                            <li>
-                                <a href="freelance-recruiters.html">
-                                    <i class="fas fa-user-tie"></i>
-                                    <div class="dropdown-item-content">
-                                        <strong>Freelance Recruiters</strong>
-                                        <span>Tools for independent recruitment professionals</span>
+                        <div class="dropdown-menu solutions-mega-new">
+                            <div class="solutions-sidebar">
+                                <h4>SOLUTIONS</h4>
+                                <ul class="solutions-nav">
+                                    <li><a href="#" class="solutions-nav-item active" data-target="recruitment-agencies">For Recruitment Agencies <i class="fas fa-chevron-right"></i></a></li>
+                                    <!-- <li><a href="#" class="solutions-nav-item" data-target="use-cases">Use Cases <i class="fas fa-chevron-right"></i></a></li> -->
+                                </ul>
+                            </div>
+                            <div class="solutions-content">
+                                <!-- For Recruitment Agencies -->
+                                <div class="solutions-panel active" id="recruitment-agencies">
+                                    <div class="solutions-grid">
+                                        <a href="executive-search.html" class="solution-card">
+                                            <i class="fas fa-briefcase"></i>
+                                            <div class="solution-card-content">
+                                                <strong>Executive Search</strong>
+                                                <span>Tools for top-tier hiring and client management.</span>
+                                            </div>
+                                        </a>
+                                        <a href="staffing-agencies.html" class="solution-card">
+                                            <i class="fas fa-plus-circle"></i>
+                                            <div class="solution-card-content">
+                                                <strong>Staffing Agencies</strong>
+                                                <span>Scalable ATS and CRM to streamline all placements.</span>
+                                            </div>
+                                        </a>
+                                        <a href="recruitment-agencies.html" class="solution-card">
+                                            <i class="fas fa-users-cog"></i>
+                                            <div class="solution-card-content">
+                                                <strong>Recruitment Agencies</strong>
+                                                <span>Customizable workflows for your recruitment success.</span>
+                                            </div>
+                                        </a>
+                                        <a href="freelance-recruiters.html" class="solution-card">
+                                            <i class="fas fa-user-tie"></i>
+                                            <div class="solution-card-content">
+                                                <strong>Freelance Recruiters</strong>
+                                                <span>Cost efficient to manage your freelance business.</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="staffing-agencies.html">
-                                    <i class="fas fa-building"></i>
-                                    <div class="dropdown-item-content">
-                                        <strong>Staffing Agencies</strong>
-                                        <span>Complete staffing agency management platform</span>
+                                </div>
+                                <!-- Use Cases -->
+                                <div class="solutions-panel" id="use-cases">
+                                    <div class="solutions-grid">
+                                        <a href="high-volume-recruiting.html" class="solution-card">
+                                            <i class="fas fa-layer-group"></i>
+                                            <div class="solution-card-content">
+                                                <strong>High-Volume Recruiting</strong>
+                                                <span>Hire at scale with automation</span>
+                                            </div>
+                                        </a>
+                                        <a href="find-job.html" class="solution-card">
+                                            <i class="fas fa-magnifying-glass"></i>
+                                            <div class="solution-card-content">
+                                                <strong>Find Job Applicants</strong>
+                                                <span>Boost sourcing across channels</span>
+                                            </div>
+                                        </a>
+                                        <a href="improve-emp.html" class="solution-card">
+                                            <i class="fas fa-award"></i>
+                                            <div class="solution-card-content">
+                                                <strong>Improve Employer Branding</strong>
+                                                <span>Showcase culture and careers</span>
+                                            </div>
+                                        </a>
+                                        <a href="enhance-candidate-xp.html" class="solution-card">
+                                            <i class="fas fa-face-smile"></i>
+                                            <div class="solution-card-content">
+                                                <strong>Enhance Candidate Experience</strong>
+                                                <span>Fast, friendly, transparent</span>
+                                            </div>
+                                        </a>
+                                        <a href="boost-recruitment.html" class="solution-card">
+                                            <i class="fas fa-bolt"></i>
+                                            <div class="solution-card-content">
+                                                <strong>Boost Recruitment Efficiency</strong>
+                                                <span>Shorten time-to-hire</span>
+                                            </div>
+                                        </a>
+                                        <a href="leverage-ai.html" class="solution-card">
+                                            <i class="fas fa-brain"></i>
+                                            <div class="solution-card-content">
+                                                <strong>Leverage AI</strong>
+                                                <span>Automate and elevate decisions</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="executive-search.html">
-                                    <i class="fas fa-crown"></i>
-                                    <div class="dropdown-item-content">
-                                        <strong>Executive Search</strong>
-                                        <span>Elite talent acquisition for C-level positions</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="recruitment-agencies.html">
-                                    <i class="fas fa-users-cog"></i>
-                                    <div class="dropdown-item-content">
-                                        <strong>Recruitment Agencies</strong>
-                                        <span>Scale your recruitment agency operations</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                                </div>
+                            </div>
+                        </div>
                     </li>
+
+                   <li><a href="ai-page.html" class="ai-nav">AI</a></li>
                     <li><a href="integration.html">Integrations</a></li>
-                    <!-- <li><a href="pages/blog.html">Resources</a></li> -->
+                    <!-- <li><a href="blog.html">Resources</a></li> -->
                     <li><a href="pricing.html">Pricing</a></li>
-                    
-                    
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
                 </ul>
             </nav>
-            <div class="headeink">
-                <a href="#" class="btn btn-outline">Book a demo</a>
-                <a href="#" class="btn btn-primary">Start free trial</a>
+            <div class="header-ctas">
+                <a href="bookdemo.html" class="btn btn-outline">Book a demo</a>
+                <a href="signin.html" class="btn btn-primary">Start free trial</a>
             </div>
             <button class="mobile-menu-toggle" aria-label="Toggle menu">
                 <span></span>
@@ -182,6 +224,7 @@
             </button>
         </div>
     </header>
+
 
     <main>
         <section class="pricing-hero">
@@ -250,99 +293,136 @@
                         </ul>
                         <a href="#" class="btn btn-outline">Contact sales</a>
                     </div>
+                    <div class="pricing-card on-demand">
+                        <h3>On Demand</h3>
+                        <div class="price">
+                            <span style="font-size: 2.7rem; font-weight: 600;">Custom</span>
+                            <span class="period" style="display:block; font-size:0.9rem; margin-top:6px;">Usage-based</span>
+                        </div>
+                        <ul>
+                            <li>Usage-based billing (no per-user fees)</li>
+                            <li>Flexible credits and top-ups</li>
+                            <li>Priority email & chat support</li>
+                            <li>Optional custom integrations</li>
+                            <li>Volume discounts for high-usage customers</li>
+                            <li>Dedicated onboarding & SLA options</li>
+                        </ul>
+                        <a href="pages/contact.html" class="btn btn-outline">Contact sales</a>
+                    </div>
+                    </div>
                 </div>
-                
-                
+
+
                 <p class="pricing-note">All plans billed annually when yearly selected. Prices shown in USD.</p>
             </div>
         </section>
 
         <section class="pricing-compare" aria-labelledby="pricing-compare-title">
-                    <h2 id="pricing-compare-title">Compare plan features</h2>
-                    <div class="compare-table rich" role="table" aria-label="Pricing feature comparison">
-                        <div class="compare-row compare-header" role="row">
-                            <div class="compare-cell sticky feature-col" role="columnheader" >Features</div>
-                            <div class="compare-cell plan-col starter" role="columnheader" style="background-color: #b9a6f4;" >Starter</div>
-                            <div class="compare-cell plan-col growth" role="columnheader" style="background-color: #8b6fe1;">Growth</div>
-                            <div class="compare-cell plan-col enterprise" role="columnheader" style="background-color: #6941C7;">Enterprise</div>
-                        </div>
-                        <div class="compare-row" role="row">
-                            <div class="compare-cell feature-col" role="cell">Monthly Applications</div>
-                            <div class="compare-cell" role="cell" style="background-color: #b9a6f4;">Up to 100</div>
-                            <div class="compare-cell" role="cell" style="background-color: #8b6fe1;">Up to 500 <span class="note">(+ $15/100 extra)</span></div>
-                            <div class="compare-cell" role="cell" style="background-color: #6941C7;">Unlimited</div>
-                        </div>
-                        <div class="compare-row" role="row">
-                            <div class="compare-cell feature-col" role="cell">Active Job Postings</div>
-                            <div class="compare-cell" role="cell" style="background-color: #b9a6f4;">5</div>
-                            <div class="compare-cell" role="cell" style="background-color: #8b6fe1;">Unlimited</div>
-                            <div class="compare-cell" role="cell" style="background-color: #6941C7;">Unlimited</div>
-                        </div>
-                        <div class="compare-row" role="row">
-                            <div class="compare-cell feature-col" role="cell">AI Candidate Matching</div>
-                            <div class="compare-cell" role="cell" style="background-color: #b9a6f4;"><span class="check"></span> Basic</div>
-                            <div class="compare-cell" role="cell" style="background-color: #8b6fe1;"><span class="check"></span> Advanced</div>
-                            <div class="compare-cell" role="cell" style="background-color: #6941C7;"><span class="check"></span> Advanced + Custom</div>
-                        </div>
-                        <div class="compare-row" role="row">
-                            <div class="compare-cell feature-col" role="cell">Analytics &amp; Reporting</div>
-                            <div class="compare-cell" role="cell" style="background-color: #b9a6f4;"><span class="x"></span></div>
-                            <div class="compare-cell" role="cell" style="background-color: #8b6fe1;"><span class="check"></span></div>
-                            <div class="compare-cell" role="cell" style="background-color: #6941C7;"><span class="check"></span> Advanced</div>
-                        </div>
-                        <div class="compare-row" role="row">
-                            <div class="compare-cell feature-col" role="cell">API Access</div>
-                            <div class="compare-cell" role="cell" style="background-color: #b9a6f4;"><span class="x"></span></div>
-                            <div class="compare-cell" role="cell" style="background-color: #8b6fe1;"><span class="check"></span></div>
-                            <div class="compare-cell" role="cell" style="background-color: #6941C7;"><span class="check"></span> + Custom APIs</div>
-                        </div>
-                        <div class="compare-row" role="row">
-                            <div class="compare-cell feature-col" role="cell">SSO Integration</div>
-                            <div class="compare-cell" role="cell" style="background-color: #b9a6f4;"><span class="x"></span></div>
-                            <div class="compare-cell" role="cell" style="background-color: #8b6fe1;"><span class="x"></span></div>
-                            <div class="compare-cell" role="cell" style="background-color: #6941C7;"><span class="check"></span> SAML SSO</div>
-                        </div>
-                        <div class="compare-row" role="row">
-                            <div class="compare-cell feature-col" role="cell">Support Level</div>
-                            <div class="compare-cell" role="cell" style="background-color: #b9a6f4;">Community</div>
-                            <div class="compare-cell" role="cell" style="background-color: #8b6fe1;">Priority Email</div>
-                            <div class="compare-cell" role="cell" style="background-color: #6941C7;">Premium Support</div>
-                        </div>
+            <h2 id="pricing-compare-title">Compare plan features</h2>
+            <div class="compare-table rich" role="table" aria-label="Pricing feature comparison">
+                <div class="compare-row compare-header" role="row">
+                    <div class="compare-cell sticky feature-col" role="columnheader">Features</div>
+                    <div class="compare-cell plan-col starter" role="columnheader" style="background-color: #b9a6f4;">
+                        Starter</div>
+                    <div class="compare-cell plan-col growth" role="columnheader" style="background-color: #8b6fe1;">
+                        Growth</div>
+                    <div class="compare-cell plan-col enterprise" role="columnheader"
+                        style="background-color: #6941C7;">Enterprise</div>
+                </div>
+                <div class="compare-row" role="row">
+                    <div class="compare-cell feature-col" role="cell">Monthly Applications</div>
+                    <div class="compare-cell" role="cell" style="background-color: #b9a6f4;">Up to 100</div>
+                    <div class="compare-cell" role="cell" style="background-color: #8b6fe1;">Up to 500 <span
+                            class="note">(+ $15/100 extra)</span></div>
+                    <div class="compare-cell" role="cell" style="background-color: #6941C7;">Unlimited</div>
+                </div>
+                <div class="compare-row" role="row">
+                    <div class="compare-cell feature-col" role="cell">Active Job Postings</div>
+                    <div class="compare-cell" role="cell" style="background-color: #b9a6f4;">5</div>
+                    <div class="compare-cell" role="cell" style="background-color: #8b6fe1;">Unlimited</div>
+                    <div class="compare-cell" role="cell" style="background-color: #6941C7;">Unlimited</div>
+                </div>
+                <div class="compare-row" role="row">
+                    <div class="compare-cell feature-col" role="cell">AI Candidate Matching</div>
+                    <div class="compare-cell" role="cell" style="background-color: #b9a6f4;"><span class="check"></span>
+                        Basic</div>
+                    <div class="compare-cell" role="cell" style="background-color: #8b6fe1;"><span class="check"></span>
+                        Advanced</div>
+                    <div class="compare-cell" role="cell" style="background-color: #6941C7;"><span class="check"></span>
+                        Advanced + Custom</div>
+                </div>
+                <div class="compare-row" role="row">
+                    <div class="compare-cell feature-col" role="cell">Analytics &amp; Reporting</div>
+                    <div class="compare-cell" role="cell" style="background-color: #b9a6f4;"><span class="x"></span>
                     </div>
-                </section>
-
-        <section class="faq-section">
-                    <div class="container">
-                        <div class="faq">
-                            <h2>Frequently Asked Questions</h2>
-                            <div class="faq-item">
-                                <div class="faq-question">Can I change plans anytime?<span class="faq-toggle">+</span></div>
-                                <div class="faq-answer">Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the next billing cycle.</div>
-                            </div>
-                            <div class="faq-item">
-                                <div class="faq-question">Is there a setup fee?<span class="faq-toggle">+</span></div>
-                                <div class="faq-answer">No, there are no setup fees or hidden costs. Just choose your plan and get started.</div>
-                            </div>
-                            <div class="faq-item">
-                                <div class="faq-question">What payment methods do you accept?<span class="faq-toggle">+</span></div>
-                                <div class="faq-answer">We accept all major credit cards, PayPal, and bank transfers for annual plans.</div>
-                            </div>
-                        </div>
+                    <div class="compare-cell" role="cell" style="background-color: #8b6fe1;"><span class="check"></span>
                     </div>
-                </section>
-
-        <section class="pre-footer-cta">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Try TalentPrism for free during 14-day with no commitment.</h2>
-                <p>No credit card required • 2 minutes to get started</p>
-                <div class="cta-buttons">
-                    <a href="pages/signin.html" class="btn btn-primary btn-large">Start Free Trial</a>
-                    <a href="#demo" class="btn btn-outline btn-large">Book a Demo</a>
+                    <div class="compare-cell" role="cell" style="background-color: #6941C7;"><span class="check"></span>
+                        Advanced</div>
+                </div>
+                <div class="compare-row" role="row">
+                    <div class="compare-cell feature-col" role="cell">API Access</div>
+                    <div class="compare-cell" role="cell" style="background-color: #b9a6f4;"><span class="x"></span>
+                    </div>
+                    <div class="compare-cell" role="cell" style="background-color: #8b6fe1;"><span class="check"></span>
+                    </div>
+                    <div class="compare-cell" role="cell" style="background-color: #6941C7;"><span class="check"></span>
+                        + Custom APIs</div>
+                </div>
+                <div class="compare-row" role="row">
+                    <div class="compare-cell feature-col" role="cell">SSO Integration</div>
+                    <div class="compare-cell" role="cell" style="background-color: #b9a6f4;"><span class="x"></span>
+                    </div>
+                    <div class="compare-cell" role="cell" style="background-color: #8b6fe1;"><span class="x"></span>
+                    </div>
+                    <div class="compare-cell" role="cell" style="background-color: #6941C7;"><span class="check"></span>
+                        SAML SSO</div>
+                </div>
+                <div class="compare-row" role="row">
+                    <div class="compare-cell feature-col" role="cell">Support Level</div>
+                    <div class="compare-cell" role="cell" style="background-color: #b9a6f4;">Community</div>
+                    <div class="compare-cell" role="cell" style="background-color: #8b6fe1;">Priority Email</div>
+                    <div class="compare-cell" role="cell" style="background-color: #6941C7;">Premium Support</div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <div class="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    <div class="faq-item">
+                        <div class="faq-question">Can I change plans anytime?<span class="faq-toggle">+</span></div>
+                        <div class="faq-answer">Yes, you can upgrade or downgrade your plan at any time. Changes take
+                            effect at the next billing cycle.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Is there a setup fee?<span class="faq-toggle">+</span></div>
+                        <div class="faq-answer">No, there are no setup fees or hidden costs. Just choose your plan and
+                            get started.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What payment methods do you accept?<span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">We accept all major credit cards, PayPal, and bank transfers for annual
+                            plans.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pre-footer-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Try TalentPrism for free during 14-day with no commitment.</h2>
+                    <p>No credit card required • 2 minutes to get started</p>
+                    <div class="cta-buttons">
+                        <a href="pages/signin.html" class="btn btn-primary btn-large">Start Free Trial</a>
+                        <a href="#demo" class="btn btn-outline btn-large">Book a Demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
@@ -354,7 +434,8 @@
                         <img src="../img/l.png" alt="TalentPrism">
                     </div>
                     <p class="footer-tagline">
-                        Revolutionizing recruitment with AI-powered talent matching and intelligent automation solutions.
+                        Revolutionizing recruitment with AI-powered talent matching and intelligent automation
+                        solutions.
                     </p>
                     <div class="footer-newsletter">
                         <h5>Stay Updated</h5>
@@ -373,7 +454,6 @@
                         <ul>
                             <li><a href="candidate-sourcing.html"> Candidate Sourcing</a></li>
                             <li><a href="ai-candidate-enrichment.html"> AI Enrichment</a></li>
-                            <li><a href="analytics.html"> Analytics & Reports</a></li>
                             <li><a href="applicant-tracking.html"> Applicant Tracking</a></li>
                             <li><a href="ai-recommendations.html"> AI Recommendations</a></li>
                         </ul>
@@ -386,7 +466,6 @@
                             <li><a href="recruitment-crm.html"> Recruitment CRM</a></li>
                             <li><a href="collaboration.html"> Collaboration</a></li>
                             <li><a href="data-privacy.html"> Data Privacy</a></li>
-                            <li><a href="support.html"> Support</a></li>
                         </ul>
                     </div>
 
@@ -438,6 +517,7 @@
         </div>
     </footer>
 
-    <script src="../js/script.js"></script>
+    <script src="../js/script.js?v=2025-11-01"></script>
 </body>
+
 </html>
