@@ -1,22 +1,44 @@
 // TalentPrism Website Script
 console.log('Script loaded successfully');
 
-// Pricing toggle functionality (guarded for pages without pricing toggle)
-const pricingToggle = document.getElementById('pricing-toggle');
+// Pricing toggle functionality (supports legacy switch and new segmented control)
+const pricingToggle = document.getElementById('pricing-toggle'); // legacy
 const priceAmounts = document.querySelectorAll('.amount');
 
+function applyBilling(mode) {
+    const isYearly = mode === 'yearly';
+    priceAmounts.forEach(amount => {
+        if (amount.textContent.trim() !== 'Custom') {
+            const monthly = parseInt(amount.dataset.monthly);
+            const yearly = parseInt(amount.dataset.yearly);
+            if (!Number.isNaN(monthly) && !Number.isNaN(yearly)) {
+                amount.textContent = isYearly ? `$${yearly}` : `$${monthly}`;
+            }
+        }
+    });
+}
+
+// New segmented control
+const billingOptions = document.querySelectorAll('.billing-option');
+if (billingOptions && billingOptions.length) {
+    billingOptions.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const mode = btn.dataset.billing === 'yearly' ? 'yearly' : 'monthly';
+            // update active state
+            billingOptions.forEach(b => {
+                const active = b === btn;
+                b.classList.toggle('active', active);
+                b.setAttribute('aria-selected', active ? 'true' : 'false');
+            });
+            applyBilling(mode);
+        });
+    });
+}
+
+// Legacy switch support
 if (pricingToggle) {
     pricingToggle.addEventListener('change', function() {
-        const isYearly = this.checked;
-        priceAmounts.forEach(amount => {
-            if (amount.textContent !== 'Custom') {
-                const monthly = parseInt(amount.dataset.monthly);
-                const yearly = parseInt(amount.dataset.yearly);
-                if (!Number.isNaN(monthly) && !Number.isNaN(yearly)) {
-                    amount.textContent = isYearly ? `$${yearly}` : `$${monthly}`;
-                }
-            }
-        });
+        applyBilling(this.checked ? 'yearly' : 'monthly');
     });
 }
 
@@ -214,11 +236,28 @@ document.addEventListener('DOMContentLoaded', function() {
         updateHeaderScroll();
     }
 
-    // Set initial pricing to yearly
-    if (pricingToggle) {
-        pricingToggle.checked = true;
-        pricingToggle.dispatchEvent(new Event('change'));
-    }
+    // Initialize pricing mode based on UI state/content
+    (function initBillingMode(){
+        // Prefer segmented control state if present
+        const activeSeg = document.querySelector('.billing-option.active');
+        if (activeSeg) {
+            applyBilling(activeSeg.dataset.billing === 'yearly' ? 'yearly' : 'monthly');
+            return;
+        }
+        // Fallback to legacy switch default to yearly for consistency
+        if (pricingToggle) {
+            pricingToggle.checked = true;
+            applyBilling('yearly');
+            return;
+        }
+        // Detect from first amount value
+        const first = document.querySelector('.amount');
+        if (first) {
+            const val = parseInt(first.textContent.replace(/[^0-9]/g, ''));
+            const y = parseInt(first.dataset.yearly);
+            applyBilling(val === y ? 'yearly' : 'monthly');
+        }
+    })();
 
     // Show analytics banner after a delay
     setTimeout(showAnalyticsBanner, 2000);
