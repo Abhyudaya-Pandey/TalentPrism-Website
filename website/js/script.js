@@ -42,24 +42,44 @@ if (pricingToggle) {
     });
 }
 
-// Mobile menu toggle
-const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-const nav = document.querySelector('.nav');
+// Mobile menu toggle (improved: accessibility + scroll lock + resilience after header rewrites)
+let mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+let nav = document.querySelector('.nav');
 
-if (mobileMenuToggle && nav) {
-    mobileMenuToggle.addEventListener('click', function() {
-        nav.classList.toggle('active');
-        this.classList.toggle('active');
-    });
+function bindMobileMenuToggle() {
+    mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    nav = document.querySelector('.nav');
+    if (!mobileMenuToggle || !nav) return;
+    // Avoid duplicate listeners
+    mobileMenuToggle.__tpBound && mobileMenuToggle.removeEventListener('click', mobileMenuToggle.__tpHandler);
+    const handler = function () {
+        const isOpen = nav.classList.toggle('active');
+        this.classList.toggle('active', isOpen);
+        this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        document.body.classList.toggle('no-scroll', isOpen);
+        // Close all open dropdown menus when collapsing
+        if (!isOpen) {
+            document.querySelectorAll('.dropdown-menu').forEach(m => m.style.display = 'none');
+        }
+    };
+    mobileMenuToggle.addEventListener('click', handler);
+    mobileMenuToggle.__tpBound = true;
+    mobileMenuToggle.__tpHandler = handler;
 }
+bindMobileMenuToggle();
 
-// Close mobile menu when clicking on a link
+// Close mobile menu when clicking on a link (skip dropdown toggles on mobile)
 const navLinks = document.querySelectorAll('.nav a');
 navLinks.forEach(link => {
     link.addEventListener('click', function() {
+        const isMobile = (window.innerWidth || document.documentElement.clientWidth) <= 768;
+        const isDropdownToggle = this.parentElement && this.parentElement.classList.contains('dropdown');
+        if (isMobile && isDropdownToggle) return; // handled by dropdown binder
         if (nav && mobileMenuToggle) {
             nav.classList.remove('active');
             mobileMenuToggle.classList.remove('active');
+            mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('no-scroll');
         }
     });
 });
@@ -68,12 +88,19 @@ navLinks.forEach(link => {
 function bindDropdownsForMobile() {
     document.querySelectorAll('.dropdown > a').forEach(toggle => {
         toggle.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
+            if ((window.innerWidth || document.documentElement.clientWidth) <= 768) {
                 e.preventDefault();
                 const dropdownMenu = this.nextElementSibling;
-                const isOpen = dropdownMenu && dropdownMenu.style.display === 'block';
+                const isOpen = dropdownMenu && (dropdownMenu.style.display === 'grid' || dropdownMenu.style.display === 'block');
                 document.querySelectorAll('.dropdown-menu').forEach(menu => menu.style.display = 'none');
-                if (dropdownMenu && !isOpen) dropdownMenu.style.display = 'block';
+                if (dropdownMenu && !isOpen) {
+                    // Use block for complex mega menus to preserve their internal layout; grid for simple lists
+                    if (dropdownMenu.classList.contains('solutions-mega') || dropdownMenu.classList.contains('solutions-mega-new')) {
+                        dropdownMenu.style.display = 'block';
+                    } else {
+                        dropdownMenu.style.display = 'grid';
+                    }
+                }
             }
         });
     });
@@ -206,6 +233,16 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('script[src^="/website/"]').forEach(s => fixAttr(s, 'src'));
     })();
 
+    // Fix relative links inside /pages so they don't incorrectly point to pages/*
+    (function fixRelativePagesLinks(){
+        const path = location.pathname.replace(/\\/g, '/');
+        if (!/\/pages\//.test(path)) return; // only adjust when already in /pages/
+        document.querySelectorAll('a[href^="pages/"]').forEach(a => {
+            const href = a.getAttribute('href');
+            if (href) a.setAttribute('href', href.replace(/^pages\//, ''));
+        });
+    })();
+
     // Slider initialization (only if we have slides)
     if (totalSlides > 0) {
         updateSlider(); // Initialize slider position
@@ -279,6 +316,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Re-bind nav interactions after potential header replacement
     initNavigationBindings();
+
+    // Normalize dropdown/menu state on resize across breakpoints
+    window.addEventListener('resize', () => {
+        const w = window.innerWidth || document.documentElement.clientWidth;
+        if (w > 768) {
+            document.querySelectorAll('.dropdown-menu').forEach(m => m.style.display = '');
+            const navEl = document.querySelector('.nav');
+            const toggleEl = document.querySelector('.mobile-menu-toggle');
+            if (navEl) navEl.classList.remove('active');
+            if (toggleEl) toggleEl.classList.remove('active');
+        }
+    });
 });
 
 // Testimonial slider (simple auto-scroll)
@@ -864,9 +913,9 @@ function standardizeHeader() {
         const header = document.querySelector('header.header');
         if (!header) return;
 
-    // If the page already includes the new mega-menu (solutions-mega) or an AI tab, don't overwrite.
+    // If the page already includes the new mega-menu (solutions-mega or solutions-mega-new) or an AI tab, don't overwrite.
     // This preserves hand-authored headers like on the homepage.
-    if (header.querySelector('.solutions-mega') || header.querySelector('a[href*="ai-page.html"]')) {
+    if (header.querySelector('.solutions-mega') || header.querySelector('.solutions-mega-new') || header.querySelector('a[href*="ai-page.html"]')) {
         return;
     }
 
@@ -988,23 +1037,23 @@ function standardizeHeader() {
 }
 
 function initNavigationBindings() {
-        const nav = document.querySelector('.nav');
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        if (mobileMenuToggle && nav) {
-                mobileMenuToggle.addEventListener('click', function() {
-                        nav.classList.toggle('active');
-                        this.classList.toggle('active');
-                });
-        }
-        bindDropdownsForMobile();
-        document.querySelectorAll('.nav a').forEach(link => {
-                link.addEventListener('click', function() {
-                        if (nav && mobileMenuToggle) {
-                                nav.classList.remove('active');
-                                mobileMenuToggle.classList.remove('active');
-                        }
-                });
+    bindMobileMenuToggle();
+    bindDropdownsForMobile();
+    const navEl = document.querySelector('.nav');
+    const toggleEl = document.querySelector('.mobile-menu-toggle');
+    document.querySelectorAll('.nav a').forEach(link => {
+        link.addEventListener('click', function() {
+            const isMobile = (window.innerWidth || document.documentElement.clientWidth) <= 768;
+            const isDropdownToggle = this.parentElement && this.parentElement.classList.contains('dropdown');
+            if (isMobile && isDropdownToggle) return; // allow dropdown open
+            if (navEl && toggleEl) {
+                navEl.classList.remove('active');
+                toggleEl.classList.remove('active');
+                toggleEl.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('no-scroll');
+            }
         });
+    });
 }
 
 // Demo form functionality

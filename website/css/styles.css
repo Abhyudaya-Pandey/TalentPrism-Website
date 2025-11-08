@@ -986,11 +986,11 @@ h2 {
     height: 3px;
     background-color: var(--text-color);
     margin: 3px 0;
-    transition: 0.3s;
+    transition: transform .35s cubic-bezier(.65,.05,.36,1), opacity .25s ease, background-color .3s ease;
 }
 
 .mobile-menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+    transform: translateY(6px) rotate(45deg);
 }
 
 .mobile-menu-toggle.active span:nth-child(2) {
@@ -998,7 +998,13 @@ h2 {
 }
 
 .mobile-menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Slide / fade for mobile nav panel */
+@media (max-width: 768px) {
+    .nav { opacity: 0; transform: translateY(-8px); transition: opacity .25s ease, transform .3s ease; }
+    .nav.active { opacity: 1; transform: translateY(0); }
 }
 
 /* Hero */
@@ -5260,21 +5266,26 @@ body.no-scroll {
 }
 
 @media (max-width: 900px) {
-    .compare-row {
-        grid-template-columns: 1.6fr 1fr 1fr;
-    }
+    /* Keep desktop structure; allow horizontal scroll */
+    .compare-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .compare-row, .compare-header { min-width: 640px; grid-template-columns: 2fr 1fr 1fr 1fr; }
 
     .compare-header {
-        display: none;
+        display: grid;
+        border-radius: 12px;
+        overflow: hidden;
     }
 
-    .compare-row .feature-col {
-        grid-column: 1 / -1;
-        background: rgba(255, 255, 255, .75);
-        font-weight: 700;
-        border: none;
-        border-radius: 10px 10px 0 0;
-    }
+    /* Ensure header cells keep original styling */
+    .compare-header .feature-col { background: transparent; }
+}
+
+/* Ultra small screens: allow horizontal scroll instead of collapsing structure */
+@media (max-width: 640px) {
+    .compare-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .compare-table.rich { padding: 12px; }
+    .compare-row, .compare-header { min-width: 640px; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; }
+    .compare-cell { white-space: nowrap; }
 }
 
 /* ===============================
@@ -5849,4 +5860,112 @@ body.no-scroll {
 
 .ai-cta-section .btn-outline:hover {
     background: rgba(255, 255, 255, 0.1);
+}
+
+/* ---------- Responsive Header & Navigation ---------- */
+@media (max-width: 1024px) {
+    .logo img {
+        height: 56px;
+    }
+    /* Prevent huge mega menus on tablets */
+    .dropdown-menu {
+        width: 90vw;
+        left: 5vw;
+        right: 5vw;
+    }
+    .dropdown-menu.solutions-mega,
+    .dropdown-menu.solutions-mega-new {
+        width: 95vw;
+        max-height: 70vh;
+    }
+}
+
+@media (max-width: 768px) {
+    header.header .container { position: relative; }
+
+    .mobile-menu-toggle { display: flex; }
+    .header-ctas { display: none; }
+
+    .nav { 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffffff;
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.12);
+        border-radius: 12px;
+        padding: 12px;
+        display: none;
+        z-index: 1200;
+        /* Ensure full menu is reachable on small screens even when body is scroll-locked */
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .nav.active { display: block; }
+    .nav ul { 
+        grid-auto-flow: row; 
+        gap: 8px; 
+        align-items: stretch;
+    }
+    .nav ul > li > a { display: block; padding: 10px 12px; border-radius: 8px; }
+    .dropdown { width: 100%; }
+
+    /* Make dropdown menus inline for mobile */
+    .dropdown-menu {
+        position: static;
+        transform: none !important;
+        width: 100%;
+        height: auto;
+        padding: 8px 6px;
+        box-shadow: none;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        backdrop-filter: none;
+        display: none; /* hidden by default; toggled via JS */
+        grid-template-columns: 1fr;
+        gap: 6px !important;
+        margin-top: 6px;
+        background: #fff;
+        /* If a dropdown has many items, allow it to scroll within the panel */
+        max-height: 70vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .dropdown-menu a { width: 100%; height: auto; min-height: 0; padding: 10px; }
+    .dropdown-menu a::before { display: none; }
+    .dropdown:hover .dropdown-menu { transform: none; }
+
+    /* Collapse complex mega menus */
+    .dropdown-menu.solutions-mega,
+    .dropdown-menu.solutions-mega-new {
+        display: block;
+        padding: 8px;
+        /* Override desktop overflow clipping and allow scroll on mobile */
+        max-height: 70vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .solutions-sidebar { width: 100%; border-right: none; padding: 8px 8px 0; }
+    .solutions-content { padding: 8px; }
+    .solutions-grid { grid-template-columns: 1fr; }
+
+    /* Hero layout */
+    .hero { padding: 120px 0 48px; }
+    .hero .container { grid-template-columns: 1fr; gap: 24px; }
+    .hero h1 { font-size: 2.25rem; }
+    .hero p { font-size: 1rem; }
+    .hero-ctas { flex-wrap: wrap; gap: 12px; }
+    .hero-visual img { transform: none; }
+
+    /* Deep-dive and feature details to single column */
+    .deep-dive-item { grid-template-columns: 1fr; gap: 32px; margin-bottom: 60px; }
+    .deep-dive-item.reverse { direction: ltr; }
+    .feature-detail { grid-template-columns: 1fr; gap: 32px; }
+}
+
+@media (max-width: 420px) {
+    .logo img { height: 48px; }
+    .btn { padding: 10px 14px; font-size: 0.95rem; }
+    .bookdemo-title { font-size: 2rem; }
 }
